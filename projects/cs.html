@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="../img/themes/active/favicon.png">
+  <title>Coming Soon | Project | MomentariyModder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="title" content="Coming Soon | Project | MomentariyModder">
+  <meta name="description" content="Welcome to my website! I am MomentariyModder, or as my friends and acquaintances often call me, Modder. I'm 19 years old, and I'm from Belarus (a small country in Europe bordering Russia and Ukraine). I also like to create almost any content for Minecraft, that is: mods, maps, resource packs, servers.">
+  <meta name="keywords" content="Minecraft, Mods, MomentariyModder">
+  <meta name="theme-color" content="#4bb4f1">
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script src="https://mcapi.us/scripts/minecraft.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../config.js"></script>
+  <script src="../js/lightbox.min.js"></script>
+
+  <script>tosAgreed = true</script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../config.css">
+  <link href="css/lightbox.css" rel="stylesheet" media="all">
+
+</head>
+
+
+<body>
+
+  <div id="target"></div>
+
+  <script id="template" type="text/x-handlebars-template">
+
+  <header>
+    <div class="hero" id="hero">
+      <a href="#!"><h1 style="padding-top: 3%;"><img class="locked" src="../img/themes/logo.png" width="50%"></h1></a>
+    <p> </p>
+    <div class="news-card" align="center">
+      <a href="../" class="btn"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="../projects" class="btn"><i class="fa-solid fa-list-ul"></i> <f class="lang" key="projects">Projects</f></a>
+      <a href="#links" class="btn"><i class="fa-solid fa-share"></i> Links</a>
+    </div>
+    <p> </p>
+    </div>
+  </header>
+
+  <section class="dark" id="projects">
+    <h1><i class="fa-solid fa-list-ul"></i> Project</h1>
+    <div id="news">
+    <div class="news-card">
+      <p align="center" style="color:#fff">
+        <img class="locked" src="../img/coming_soon.png" width="50%" class="enlarge">
+      </p>
+    </div>
+  </section>
+  <section class="dark">
+    <div class="news-card" align="center">
+    <a href="../projects" class="btn2"><i class="fa-solid fa-arrow-left"></i> Back to Projects</a>
+    </div>
+  </section>
+
+  <section class="light">
+    <h1><i class="fa-solid fa-share"></i> Links</h1>
+    <div id="links" align="center">
+      <a href="https://discord.gg/NQBhQRDEhF"><img title="Discord" src="../img/links/discord.png" alt="Discord" width="5%" /></a>
+      <a href="https://www.curseforge.com/members/donne431/projects"><img title="CurseForge" src="../img/links/curseforge.png" alt="CurseForge" width="5%" /></a>
+      <a href="https://modrinth.com/user/Donne431"><img title="Modrinth" src="../img/links/Modrinth.png" alt="Modrinth" width="5%" /></a>
+      <a href="https://github.com/Donne431"><img title="GitHub" src="../img/links/GitHub.png" alt="GitHub" width="5%" /></a>
+      <a href="https://www.donationalerts.com/r/donne431"><img title="DonationAlerts" src="../img/links/da.png" alt="DonationAlerts" width="5%" /></a>
+    </div>
+  </section>
+
+  <footer>
+    <a>&copy; {{server_port}} {{server_name}}. All Rights Reserved.</br>{{server_name}} is not affiliated with or endorsed by Mojang Studios or Microsoft<br>{{server_ip}}</a>
+    <a></a>
+    <img class="locked" src="../img/themes/active/favicon.png" style="height:4em">
+  </footer>
+  </script>
+  <script src="../js/license.js"></script>
+
+</body>
+</html>
