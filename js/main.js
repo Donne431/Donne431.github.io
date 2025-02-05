@@ -1,23 +1,18 @@
-/*!
- * MomentariyModder Website 7.0.0 by MomentariyModder
- * The source code is available on GitHub!
- */
-
 function copyIP() {
     var before = document.getElementById("ip").innerText;
-	var ip = document.getElementById("ip");
-	var range = document.createRange();
-	range.selectNode(ip);
-	window.getSelection().removeAllRanges();
-	window.getSelection().addRange(range);
-	document.execCommand("copy");
-	window.getSelection().removeAllRanges();
-	// Change Text
-	ip.innerText = ip_copied;
-	setTimeout(
-	function() {
-	  ip.innerText = before;
-	},1000);
+    var ip = document.getElementById("ip");
+    var range = document.createRange();
+    range.selectNode(ip);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges();
+    // Change Text
+    ip.innerText = ip_copied;
+    setTimeout(
+    function() {
+      ip.innerText = before;
+    },1000);
 }
 
 window.onload = function() {
@@ -26,7 +21,7 @@ window.onload = function() {
   var rendered = compiled_template({
       server_name: server_name,
       server_ip: server_ip,
-	  server_port: server_port
+      server_port: server_port
   });
   document.getElementById('target').innerHTML = rendered;
 
@@ -34,18 +29,18 @@ window.onload = function() {
   const status_message = document.querySelector('.server-status')
   const status_container = document.querySelector('.server-status-container')
   MinecraftAPI.getServerStatus(server_ip, {
-	port: server_port
+    port: server_port
   }, function (err, status) {
-	if (err) {
-	  status_container.innerHTML = "Error getting server status of <span class='info'>" + server_ip + "</span><br><span class='info' style='color:#ff4545;font-size:.5em;'>" + err
-	}
-	else if (status.online == false) {
-	  // If status.last_online returns "undefined". That means the API hasn't accessed your server yet so it doesn't know when it was last online
-	  status_container.innerHTML = "Server is <span class='info' style='color:#ff4545'>offline</span>. Last checked " + (status.last_online/60)
-	}
-	else {
+    if (err) {
+      status_container.innerHTML = "Error getting server status of <span class='info'>" + server_ip + "</span><br><span class='info' style='color:#ff4545;font-size:.5em;'>" + err
+    }
+    else if (status.online == false) {
+      // If status.last_online returns "undefined". That means the API hasn't accessed your server yet so it doesn't know when it was last online
+      status_container.innerHTML = "Server is <span class='info' style='color:#ff4545'>offline</span>. Last checked " + (status.last_online/60)
+    }
+    else {
       status_message.innerText = status.players.now;
-	}
+    }
   });
 
 }
@@ -54,7 +49,7 @@ function staff(name, uuid, rank) {
   let staffTemplate = $("#staff-template").html()
     .replaceAll("{{ name }}", name)
     .replaceAll("{{ rank }}", rank)
-	.replaceAll("{{ uuid }}", uuid)
+    .replaceAll("{{ uuid }}", uuid)
 
   setTimeout(
     function() {
@@ -66,7 +61,7 @@ function vote(service, image, link) {
   let voteTemplate = $("#vote-template").html()
     .replaceAll("{{ service }}", service)
     .replaceAll("{{ image }}", image)
-	.replaceAll("{{ link }}", link)
+    .replaceAll("{{ link }}", link)
 
   setTimeout(
     function() {
@@ -84,5 +79,5 @@ var gitalk = new Gitalk({
   id: location.pathname,      // Ensure uniqueness and length less than 50
   distractionFreeMode: false  // Facebook-like distraction free mode
 })
-  
+
 gitalk.render('gitalk-container')

@@ -1,8 +1,3 @@
-/*!
- * MomentariyModder Website 7.0.0 by MomentariyModder
- * The source code is available on GitHub!
- */
-
 let style=`
   <style>
   .lw-overlay {
@@ -35,7 +30,7 @@ let warning=`
     <div class="lw-popup">
       <div class="lw-content">
         <p align="center" style="font-size: 30px;">
-		  <img src="https://momentariymodder.netlify.app/img/thames/logo.png" width="75%" align="center"><br><br>
+          <img src="https://momentariymodder.netlify.app/img/thames/logo.png" width="75%" align="center"><br><br>
           <a >The site is on technical work!</a>
         </p>
       </div>
