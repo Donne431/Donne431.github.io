@@ -447,6 +447,14 @@ hr {
     text-align: center;
     border-radius: 1em;
 }
+.news-card-left {
+    margin: auto;
+    position: relative;
+    padding: 1em;
+    background: #34393e;
+    text-align: left;
+    border-radius: 1em;
+}
 .news-card h3 {
     line-height: 0;
     font-family: 'Lexend',sans-serif;
