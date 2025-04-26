@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Схематики</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/img/amythest/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
+</head>
+<body>
+    <div class="container">
+        <!-- Шапка сайта -->
+        <header>
+            <h1>Схематики</h1>
+            <p class="header-subtitle">Коллекция схем для ваших проектов</p>
+        </header>
+
+        <!-- Секция фильтров -->
+        <section class="filter-section">
+            <input type="text" id="tag-search" placeholder="Поиск тегов...">
+            <div class="tag-list" id="tag-list"></div>
+        </section>
+
+        <!-- Сетка схем -->
+        <section class="schematics-grid" id="schematics-grid"></section>
+
+        <!-- Форма добавления новой схемы -->
+        <!--
+        <section class="add-form">
+            <h2>Добавить новую схему</h2>
+            <input type="text" id="new-title" placeholder="Название схемы">
+            <textarea id="new-description" placeholder="Краткое описание"></textarea>
+            <input type="text" id="new-tags" placeholder="Теги (через запятую)">
+            <input type="text" id="new-image" placeholder="URL изображения">
+            <button onclick="addSchematic()">Добавить</button>
+        </section>
+        -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

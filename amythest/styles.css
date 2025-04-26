@@ -1,0 +1,412 @@
+/* Переменные из config.css */
+:root {
+    --dark-color: #24272b;
+    --dark-text-color: #fff;
+    --light-color: #34393e;
+    --light-text-color: #fff;
+    --button-color: #24272b;
+    --button-text-color: #fff;
+    --button-hover-color: #2b6ed9;
+    --button-hover-text-color: #fff;
+    --button2-color: #fff;
+    --button2-text-color: #24272b;
+    --button2-hover-color: #fff;
+    --button2-hover-text-color: #2b6ed9;
+    --info-color: #4bb4f1;
+}
+
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend', sans-serif;
+}
+
+/* Кастомный скроллбар */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light-color);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2) inset;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--dark-color);
+    border-radius: 8px;
+    border: 3px solid var(--light-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--button-hover-color);
+}
+
+/* Основной фон и текст */
+body {
+    background-color: var(--light-color);
+    color: var(--light-text-color);
+    padding: 20px;
+}
+
+/* Контейнер */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Заголовок */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: var(--dark-color);
+    padding: 20px;
+    border-radius: 1em;
+}
+
+header h1 {
+    font-size: 4em;
+    color: var(--info-color);
+}
+
+header .header-subtitle {
+    font-size: 1.2em;
+    color: var(--dark-text-color);
+    margin-top: 10px;
+}
+
+@media (max-width: 1200px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+    header .header-subtitle {
+        font-size: 1em;
+    }
+}
+
+/* Секция фильтров */
+.filter-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    align-items: center;
+    background-color: var(--dark-color);
+    padding: 15px;
+    border-radius: 1em;
+}
+
+.filter-section input {
+    padding: 10px 25px;
+    font-size: 1em;
+    border: none;
+    background-color: var(--light-color);
+    color: var(--light-text-color);
+    border-radius: 1em;
+    width: 200px;
+}
+
+/* Список тегов */
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    padding: 10px 25px;
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    border-radius: 1em;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.tag:hover {
+    background-color: var(--button-hover-color);
+    color: var(--button-hover-text-color);
+}
+
+.tag.active {
+    background-color: var(--info-color);
+}
+
+/* Сетка схем */
+.schematics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
+    gap: 20px;
+}
+
+@media (max-width: 1200px) {
+    .schematics-grid {
+        grid-template-columns: repeat(auto-fill, minmax(13em, 1fr));
+    }
+}
+
+/* Карточка схемы */
+.schematic-card {
+    background-color: var(--dark-color);
+    border-radius: 1em;
+    padding: 1em;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.schematic-card:hover {
+    transform: scale(1.1);
+}
+
+.schematic-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 1em;
+}
+
+.schematic-card img:hover {
+    filter: drop-shadow(0.5rem 0.5rem 0.25rem rgba(0, 0, 0, 0.2));
+}
+
+.schematic-card .content {
+    padding: 15px;
+}
+
+.schematic-card h3 {
+    font-size: 1.5em;
+    color: var(--dark-text-color);
+    margin-bottom: 10px;
+}
+
+.schematic-card p {
+    font-size: 0.9em;
+    color: var(--dark-text-color);
+    margin-bottom: 10px;
+}
+
+.schematic-card .tags {
+    font-size: 0.8em;
+    color: var(--info-color);
+    margin-bottom: 10px;
+}
+
+/* Кнопка "Открыть" */
+.schematic-card .open-button {
+    padding: 10px 25px;
+    background: var(--button2-color);
+    color: var(--button2-text-color);
+    display: inline-block;
+    border-radius: 1em;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.schematic-card .open-button:hover {
+    background: var(--button2-hover-color);
+    color: var(--button2-hover-text-color);
+}
+
+/* Форма добавления */
+.add-form {
+    margin-top: 30px;
+    background-color: var(--dark-color);
+    padding: 20px;
+    border-radius: 1em;
+}
+
+.add-form h2 {
+    font-size: 1.5em;
+    color: var(--dark-text-color);
+    margin-bottom: 20px;
+}
+
+.add-form input,
+.add-form textarea {
+    width: 100%;
+    padding: 10px 25px;
+    margin-bottom: 15px;
+    border: none;
+    background-color: var(--light-color);
+    color: var(--light-text-color);
+    border-radius: 1em;
+}
+
+.add-form button {
+    padding: 10px 25px;
+    background: var(--button-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 1em;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.add-form button:hover {
+    background: var(--button-hover-color);
+    color: var(--button-hover-text-color);
+}
+
+/* Стили для schematic.html */
+.schematic-details {
+    background-color: var(--dark-color);
+    padding: 20px;
+    border-radius: 1em;
+    margin-bottom: 30px;
+}
+
+.schematic-details h2 {
+    font-size: 2em;
+    color: var(--info-color);
+    margin-bottom: 15px;
+}
+
+.schematic-details .description {
+    font-size: 1em;
+    color: var(--dark-text-color);
+    margin-bottom: 20px;
+}
+
+.schematic-details .tags {
+    font-size: 0.9em;
+    color: var(--info-color);
+    margin-bottom: 20px;
+}
+
+/* Раздел изображений */
+.schematic-details .images-section {
+    margin-bottom: 30px;
+}
+
+.schematic-details .images-section h3 {
+    font-size: 1.5em;
+    color: var(--dark-text-color);
+    margin-bottom: 15px;
+}
+
+.schematic-details .images-section .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.schematic-details .images-section img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 1em;
+    object-fit: cover;
+}
+
+.schematic-details .images-section img:hover {
+    filter: drop-shadow(0.5rem 0.5rem 0.25rem rgba(0, 0, 0, 0.2));
+}
+
+/* Раздел требуемых ресурсов */
+.schematic-details .resources-section {
+    margin-bottom: 30px;
+}
+
+.schematic-details .resources-section h3 {
+    font-size: 1.5em;
+    color: var(--dark-text-color);
+    margin-bottom: 15px;
+}
+
+.schematic-details .resources-section ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.schematic-details .resources-section li {
+    font-size: 1em;
+    color: var(--dark-text-color);
+    margin-bottom: 10px;
+}
+
+/* Раздел ссылок на скачивание */
+.schematic-details .downloads-section {
+    margin-bottom: 30px;
+}
+
+.schematic-details .downloads-section h3 {
+    font-size: 1.5em;
+    color: var(--dark-text-color);
+    margin-bottom: 15px;
+}
+
+.schematic-details .downloads-section ul {
+    list-style: none;
+}
+
+.schematic-details .downloads-section li {
+    margin-bottom: 10px;
+}
+
+.schematic-details .downloads-section a {
+    color: var(--info-color);
+    text-decoration: none;
+    font-size: 1em;
+    transition: all 0.3s;
+}
+
+.schematic-details .downloads-section a:hover {
+    color: var(--button-hover-color);
+}
+
+.schematic-details .downloads-section .description {
+    font-size: 0.9em;
+    color: var(--dark-text-color);
+    margin-left: 10px;
+}
+
+/* Кнопка "Назад" */
+.schematic-details .back-button {
+    padding: 10px 25px;
+    background: var(--button2-color);
+    color: var(--button2-text-color);
+    display: inline-block;
+    border-radius: 1em;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.schematic-details .back-button:hover {
+    background: var(--button2-hover-color);
+    color: var(--button2-hover-text-color);
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+    .filter-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-section input {
+        width: 100%;
+    }
+
+    .schematic-details .images-section img {
+        max-width: 100%;
+    }
+
+    .schematic-details h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 600px) {
+    .schematic-card img {
+        height: 120px;
+    }
+
+    .schematic-card h3 {
+        font-size: 1.1em;
+    }
+
+    .add-form input,
+    .add-form textarea {
+        padding: 8px;
+    }
+}

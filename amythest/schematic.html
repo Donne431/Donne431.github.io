@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подробности схематики</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Подробности схематики</h1>
+            <p class="header-subtitle">Изучите детали схемы для ваших проектов</p>
+        </header>
+        <section class="schematic-details" id="schematic-details">
+            <!-- Контент будет заполнен через JavaScript -->
+        </section>
+        <a href="index.html" class="back-button"><i class="fa-solid fa-arrow-left"></i> Назад к списку</a>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Проверка доступности schematics
+        if (typeof schematics === 'undefined') {
+            console.error('Ошибка: массив schematics не определён. Проверьте, загружается ли script.js');
+            document.getElementById('schematic-details').innerHTML = `
+                <h2>Ошибка</h2>
+                <p>Не удалось загрузить данные. Проверьте подключение script.js.</p>
+            `;
+        } else {
+            // Получение ID из URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = parseInt(urlParams.get('id'), 10);
+            console.log('ID из URL:', id);
+
+            // Проверка валидности ID
+            if (isNaN(id) || id < 0 || id >= schematics.length) {
+                console.warn('Неверный ID:', id);
+                document.getElementById('schematic-details').innerHTML = `
+                    <h2>Ошибка</h2>
+                    <p>Схематика не найдена.</p>
+                `;
+            } else {
+                const schematic = schematics[id];
+                console.log('Загруженная схема:', schematic);
+                document.getElementById('schematic-details').innerHTML = `
+                    <h2>${schematic.title}</h2>
+                    <p class="description">${schematic.description}</p>
+                    <p class="tags">Теги: ${schematic.tags.join(', ')}</p>
+                    <div class="images-section">
+                        <h3>Изображения</h3>
+                        <div class="image-gallery">
+                            ${schematic.images.map(img => `<img src="${img}" alt="${schematic.title}">`).join('')}
+                        </div>
+                    </div>
+                    <div class="resources-section">
+                        <h3>Требуемые ресурсы</h3>
+                        <ul>
+                            ${schematic.resources.map(resource => `<li>${resource}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <div class="downloads-section">
+                        <h3>Ссылки на скачивание</h3>
+                        <ul>
+                            ${schematic.downloads.map(file => `
+                                <li>
+                                    <a href="${file.url}" target="_blank">${file.name}</a>
+                                    <span class="description">${file.description}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
