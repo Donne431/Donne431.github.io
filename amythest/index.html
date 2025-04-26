@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Схематики</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="/img/amythest/favicon.png">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
 </head>
@@ -28,16 +27,18 @@
         <section class="schematics-grid" id="schematics-grid"></section>
 
         <!-- Форма добавления новой схемы -->
-        <!--
         <section class="add-form">
             <h2>Добавить новую схему</h2>
             <input type="text" id="new-title" placeholder="Название схемы">
             <textarea id="new-description" placeholder="Краткое описание"></textarea>
+            <textarea id="new-detailed-description" placeholder="Подробное описание для страницы схематики"></textarea>
             <input type="text" id="new-tags" placeholder="Теги (через запятую)">
-            <input type="text" id="new-image" placeholder="URL изображения">
+            <input type="text" id="new-image" placeholder="URL основного изображения">
+            <input type="text" id="new-images" placeholder="URLs дополнительных изображений (через запятую)">
+            <textarea id="new-resources" placeholder="Требуемые ресурсы (каждый с новой строки)"></textarea>
+            <textarea id="new-downloads" placeholder="Ссылки на скачивание: название|URL|описание (каждая с новой строки)"></textarea>
             <button onclick="addSchematic()">Добавить</button>
         </section>
-        -->
     </div>
 
     <script src="script.js"></script>

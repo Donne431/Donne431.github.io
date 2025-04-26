@@ -31,24 +31,24 @@
                 <p>Не удалось загрузить данные. Проверьте подключение script.js.</p>
             `;
         } else {
-            // Получение ID из URL
+            // Получение index из URL
             const urlParams = new URLSearchParams(window.location.search);
-            const id = parseInt(urlParams.get('id'), 10);
-            console.log('ID из URL:', id);
+            const index = parseInt(urlParams.get('id'), 10);
+            console.log('Index из URL:', index);
 
-            // Проверка валидности ID
-            if (isNaN(id) || id < 0 || id >= schematics.length) {
-                console.warn('Неверный ID:', id);
+            // Проверка валидности index
+            if (isNaN(index) || index < 0 || index >= schematics.length) {
+                console.warn('Неверный index:', index);
                 document.getElementById('schematic-details').innerHTML = `
                     <h2>Ошибка</h2>
                     <p>Схематика не найдена.</p>
                 `;
             } else {
-                const schematic = schematics[id];
+                const schematic = schematics[index];
                 console.log('Загруженная схема:', schematic);
                 document.getElementById('schematic-details').innerHTML = `
                     <h2>${schematic.title}</h2>
-                    <p class="description">${schematic.description}</p>
+                    <p class="description">${schematic.detailedDescription}</p>
                     <p class="tags">Теги: ${schematic.tags.join(', ')}</p>
                     <div class="images-section">
                         <h3>Изображения</h3>

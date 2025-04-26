@@ -1,8 +1,8 @@
-// Пример данных схем
 const schematics = [
     {
         title: "Электрическая схема",
         description: "Простая схема для домашнего использования.",
+        detailedDescription: "Эта схема предназначена для создания базовой электрической системы в жилом доме. Она включает подключение розеток, выключателей и распределительного щита, обеспечивая безопасность и эффективность.",
         tags: ["электрика", "дом", "простая"],
         image: "/img/placeholders/purple_place_holder.png",
         images: [
@@ -23,6 +23,7 @@ const schematics = [
     {
         title: "Схема освещения",
         description: "Схема для системы освещения офиса.",
+        detailedDescription: "Данная схема разработана для офисных помещений, обеспечивая оптимальное освещение с использованием энергоэффективных LED-светильников. Включает план размещения и подключения.",
         tags: ["освещение", "офис", "электрика"],
         image: "/img/placeholders/purple_place_holder.png",
         images: [
@@ -41,6 +42,7 @@ const schematics = [
     {
         title: "Схема двигателя",
         description: "Схема для управления электродвигателем.",
+        detailedDescription: "Схема для автоматизированного управления электродвигателем мощностью 1.5 кВт с использованием контроллера Siemens S7-1200. Подходит для промышленных приложений.",
         tags: ["двигатель", "автоматизация"],
         image: "/img/placeholders/purple_place_holder.png",
         images: [
@@ -142,30 +144,46 @@ document.getElementById('tag-search').addEventListener('input', (e) => {
 
 // Добавление новой схемы
 function addSchematic() {
-    const title = document.getElementById('new-title').value;
-    const description = document.getElementById('new-description').value;
-    const tags = document.getElementById('new-tags').value.split(',').map(t => t.trim());
-    const image = document.getElementById('new-image').value || '/img/placeholders/purple_place_holder.png';
-    const images = [image];
-    const downloads = [
-        { name: "Новая_схема.pdf", description: "Файл с новой схемой", url: "#" }
-    ];
-    const resources = [
-        "Материалы для новой схемы",
-        "Инструменты для сборки"
-    ];
+    const title = document.getElementById('new-title').value.trim();
+    const description = document.getElementById('new-description').value.trim();
+    const detailedDescription = document.getElementById('new-detailed-description').value.trim();
+    const tags = document.getElementById('new-tags').value.split(',').map(t => t.trim()).filter(t => t);
+    const image = document.getElementById('new-image').value.trim() || '/img/placeholders/purple_place_holder.png';
+    const imagesInput = document.getElementById('new-images').value.split(',').map(i => i.trim()).filter(i => i);
+    const images = imagesInput.length > 0 ? imagesInput : [image];
+    const resources = document.getElementById('new-resources').value.split('\n').map(r => r.trim()).filter(r => r);
+    const downloadsInput = document.getElementById('new-downloads').value.split('\n').map(d => d.trim()).filter(d => d);
+    const downloads = downloadsInput.map(d => {
+        const [name, url, description] = d.split('|').map(s => s.trim());
+        return { name: name || 'Файл', url: url || '#', description: description || 'Без описания' };
+    });
 
     if (title && description && tags.length > 0) {
-        schematics.push({ title, description, tags, image, images, downloads, resources });
+        schematics.push({
+            title,
+            description,
+            detailedDescription: detailedDescription || 'Подробное описание отсутствует',
+            tags,
+            image,
+            images,
+            downloads: downloads.length > 0 ? downloads : [{ name: "Новая_схема.pdf", description: "Файл с новой схемой", url: "#" }],
+            resources: resources.length > 0 ? resources : ["Материалы не указаны"]
+        });
         document.getElementById('new-title').value = '';
         document.getElementById('new-description').value = '';
+        document.getElementById('new-detailed-description').value = '';
         document.getElementById('new-tags').value = '';
         document.getElementById('new-image').value = '';
+        document.getElementById('new-images').value = '';
+        document.getElementById('new-resources').value = '';
+        document.getElementById('new-downloads').value = '';
         renderTags();
         filterSchematics();
     }
 }
 
 // Инициализация
-renderTags();
-filterSchematics();
+document.addEventListener('DOMContentLoaded', () => {
+    renderTags();
+    filterSchematics();
+});
