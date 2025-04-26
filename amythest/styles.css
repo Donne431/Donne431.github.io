@@ -361,19 +361,23 @@ header .header-subtitle {
 }
 
 /* Кнопка "Назад" */
-.schematic-details .back-button {
+.back-button {
     padding: 10px 25px;
-    background: var(--button2-color);
-    color: var(--button2-text-color);
-    display: inline-block;
+    background: var(--button-color);
+    color: var(--button-text-color);
+    border: none;
     border-radius: 1em;
+    cursor: pointer;
     transition: all 0.3s;
-    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1em;
 }
 
-.schematic-details .back-button:hover {
-    background: var(--button2-hover-color);
-    color: var(--button2-hover-text-color);
+.back-button:hover {
+    background: var(--button-hover-color);
+    color: var(--button-hover-text-color);
 }
 
 /* Адаптивность */
