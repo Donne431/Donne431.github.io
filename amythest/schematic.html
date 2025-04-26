@@ -59,7 +59,12 @@
                     <div class="resources-section">
                         <h3>Требуемые ресурсы</h3>
                         <ul>
-                            ${schematic.resources.map(resource => `<li>${resource}</li>`).join('')}
+                            ${schematic.resources.map(resource => `
+                                <li>
+                                    ${resource.icon ? `<img src="${resource.icon}" alt="Иконка ${resource.text}">` : ''}
+                                    ${resource.text}
+                                </li>
+                            `).join('')}
                         </ul>
                     </div>
                     <div class="downloads-section">

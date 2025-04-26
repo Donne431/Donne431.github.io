@@ -14,10 +14,10 @@ const schematics = [
             { name: "Инструкция.docx", description: "Инструкция по установке", url: "#" }
         ],
         resources: [
-            "Медные провода 2.5 мм²",
-            "Розетки и выключатели",
-            "Распределительный щит",
-            "Мультиметр"
+            { text: "Медные провода 2.5 мм²", icon: "/img/themes/active/favicon.png" },
+            { text: "Розетки и выключатели", icon: null },
+            { text: "Распределительный щит", icon: "https://via.placeholder.com/16/FF0000" },
+            { text: "Мультиметр", icon: null }
         ]
     },
     {
@@ -33,10 +33,10 @@ const schematics = [
             { name: "План.pdf", description: "План размещения светильников", url: "#" }
         ],
         resources: [
-            "LED-светильники 20 Вт",
-            "Кабель ВВГ 3x1.5",
-            "Автоматический выключатель",
-            "Монтажные коробки"
+            { text: "LED-светильники 20 Вт", icon: "https://via.placeholder.com/16" },
+            { text: "Кабель ВВГ 3x1.5", icon: null },
+            { text: "Автоматический выключатель", icon: null },
+            { text: "Монтажные коробки", icon: "https://via.placeholder.com/16/00FF00" }
         ]
     },
     {
@@ -55,10 +55,10 @@ const schematics = [
             { name: "Настройки.xlsx", description: "Таблица настроек", url: "#" }
         ],
         resources: [
-            "Электродвигатель 1.5 кВт",
-            "Контроллер Siemens S7-1200",
-            "Кабель силовой 3x2.5",
-            "Тестер для проверки"
+            { text: "Электродвигатель 1.5 кВт", icon: "https://via.placeholder.com/16" },
+            { text: "Контроллер Siemens S7-1200", icon: null },
+            { text: "Кабель силовой 3x2.5", icon: null },
+            { text: "Тестер для проверки", icon: "https://via.placeholder.com/16/0000FF" }
         ]
     }
 ];
@@ -151,7 +151,11 @@ function addSchematic() {
     const image = document.getElementById('new-image').value.trim() || '/img/placeholders/purple_place_holder.png';
     const imagesInput = document.getElementById('new-images').value.split(',').map(i => i.trim()).filter(i => i);
     const images = imagesInput.length > 0 ? imagesInput : [image];
-    const resources = document.getElementById('new-resources').value.split('\n').map(r => r.trim()).filter(r => r);
+    const resourcesInput = document.getElementById('new-resources').value.split('\n').map(r => r.trim()).filter(r => r);
+    const resources = resourcesInput.map(r => {
+        const [text, icon] = r.split('|').map(s => s.trim());
+        return { text: text || 'Ресурс', icon: icon || null };
+    });
     const downloadsInput = document.getElementById('new-downloads').value.split('\n').map(d => d.trim()).filter(d => d);
     const downloads = downloadsInput.map(d => {
         const [name, url, description] = d.split('|').map(s => s.trim());
@@ -167,7 +171,7 @@ function addSchematic() {
             image,
             images,
             downloads: downloads.length > 0 ? downloads : [{ name: "Новая_схема.pdf", description: "Файл с новой схемой", url: "#" }],
-            resources: resources.length > 0 ? resources : ["Материалы не указаны"]
+            resources: resources.length > 0 ? resources : [{ text: "Материалы не указаны", icon: null }]
         });
         document.getElementById('new-title').value = '';
         document.getElementById('new-description').value = '';
