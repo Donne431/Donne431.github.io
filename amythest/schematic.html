@@ -19,10 +19,19 @@
             <!-- Контент будет заполнен через JavaScript -->
         </section>
         <button class="back-button" onclick="window.location.href='index.html'"><i class="fa-solid fa-arrow-left"></i> Назад к списку</button>
+        <div class="lightbox" id="lightbox">
+            <button class="lightbox-nav prev" id="lightbox-prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <img id="lightbox-img" src="" alt="Увеличенное изображение">
+            <button class="lightbox-nav next" id="lightbox-next"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
     </div>
 
     <script src="script.js"></script>
     <script>
+        // Глобальные переменные для карусели
+        let currentImages = [];
+        let currentImageIndex = 0;
+
         // Проверка доступности schematics
         if (typeof schematics === 'undefined') {
             console.error('Ошибка: массив schematics не определён. Проверьте, загружается ли script.js');
@@ -53,7 +62,7 @@
                     <div class="images-section">
                         <h3>Изображения</h3>
                         <div class="image-gallery">
-                            ${schematic.images.map(img => `<img src="${img}" alt="${schematic.title}">`).join('')}
+                            ${schematic.images.map((img, idx) => `<img src="${img}" alt="${schematic.title}" onclick="openLightbox(${index}, ${idx})">`).join('')}
                         </div>
                     </div>
                     <div class="resources-section">
@@ -81,6 +90,75 @@
                 `;
             }
         }
+
+        // Функция открытия лайтбокса
+        function openLightbox(schematicIndex, imageIndex) {
+            console.log('Открытие лайтбокса: схема', schematicIndex, 'изображение', imageIndex);
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const prevButton = document.getElementById('lightbox-prev');
+            const nextButton = document.getElementById('lightbox-next');
+            
+            // Сохранить массив изображений и текущий индекс
+            currentImages = schematics[schematicIndex].images;
+            currentImageIndex = imageIndex;
+            
+            // Установить изображение
+            lightboxImg.src = currentImages[currentImageIndex];
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Отключить прокрутку
+
+            // Показать/скрыть кнопки навигации
+            if (currentImages.length > 1) {
+                prevButton.style.display = 'block';
+                nextButton.style.display = 'block';
+            } else {
+                prevButton.style.display = 'none';
+                nextButton.style.display = 'none';
+            }
+        }
+
+        // Функция закрытия лайтбокса
+        function closeLightbox() {
+            console.log('Закрытие лайтбокса');
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Включить прокрутку
+        }
+
+        // Показать предыдущее изображение
+        function showPrevImage() {
+            console.log('Переключение на предыдущее изображение');
+            currentImageIndex = (currentImageIndex - 1 + currentImages.length) % currentImages.length;
+            document.getElementById('lightbox-img').src = currentImages[currentImageIndex];
+        }
+
+        // Показать следующее изображение
+        function showNextImage() {
+            console.log('Переключение на следующее изображение');
+            currentImageIndex = (currentImageIndex + 1) % currentImages.length;
+            document.getElementById('lightbox-img').src = currentImages[currentImageIndex];
+        }
+
+        // Закрытие лайтбокса при клике на фон
+        document.getElementById('lightbox').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) {
+                console.log('Клик по фону лайтбокса');
+                closeLightbox();
+            }
+        });
+
+        // Закрытие лайтбокса при нажатии Esc
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                console.log('Нажата клавиша Esc');
+                closeLightbox();
+            }
+        });
+
+        // Навигация по изображениям
+        document.getElementById('lightbox-prev').addEventListener('click', showPrevImage);
+        document.getElementById('lightbox-next').addEventListener('click', showNextImage);
     </script>
 </body>
 </html>

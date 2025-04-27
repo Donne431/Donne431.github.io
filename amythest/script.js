@@ -153,6 +153,32 @@ const schematics = [
             { text: "Регулятор скорости вращения х1", icon: "/img/minecraft/64x/регулятор-скорости-вращения.png" },
             { text: "Шестерня х3", icon: "/img/minecraft/64x/шестерня.png" },
         ]
+    },
+    {
+        title: "Купольная база",
+        description: "База из колотого глубинного сланца с куплом из стекла",
+        detailedDescription: "Схематика базы из колотого глубинного сланца с куполом из стекла. Масштаб: ~ 8х8 чанков",
+        tags: ["база", "1.20.1", "0.5.1"],
+        image: "/img/amythest/dome_base-1.png",
+        images: [
+            "/img/amythest/dome_base-1.png",
+            "/img/amythest/dome_base-2.png",
+            "/img/amythest/dome_base-3.png"
+        ],
+        downloads: [
+            { name: "base_sever_vostok.nbt", description: "Северо-Восток", url: "/files/amythest/base_sever_vostok.nbt" },
+            { name: "base_sever_zapad.nbt", description: "Северо-Запад", url: "/files/amythest/base_sever_zapad.nbt" },
+            { name: "base_yug_vostok.nbt", description: "Юго-Восток", url: "/files/amythest/base_yug_vostok.nbt" },
+            { name: "base_yug_zapad.nbt", description: "Юго-Запад", url: "/files/amythest/base_yug_zapad.nbt" },
+            { name: "base_stolb.nbt", description: "Столб", url: "/files/amythest/base_stolb.nbt" },
+            { name: "base_stolb_bigger1.nbt", description: "Столб (Увеличенная версия)", url: "/files/amythest/base_stolb_bigger1.nbt" },
+            { name: "base_stolb_bigger2.nbt", description: "Столб (Увеличенная+ версия)", url: "/files/amythest/base_stolb_bigger2.nbt" },
+            { name: "base_stolb_diagonal.nbt", description: "Диагональный Столб", url: "/files/amythest/base_stolb_diagonal.nbt" }
+        ],
+        resources: [
+            { text: "Колотый глубинный сланец х28.008 (~438 стаков) [Минимальная комплектация]", icon: "/img/minecraft/64x/колотый-глубинный-сланец.png" },
+            { text: "Стекло х19.416 (~304 стаков)", icon: "/img/minecraft/64x/стекло.png" }
+        ]
     }
 ];
 

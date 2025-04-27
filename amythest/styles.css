@@ -301,10 +301,90 @@ header .header-subtitle {
     height: auto;
     border-radius: 1em;
     object-fit: cover;
+    cursor: pointer;
 }
 
 .schematic-details .images-section img:hover {
     filter: drop-shadow(0.5rem 0.5rem 0.25rem rgba(0, 0, 0, 0.2));
+}
+
+/* Лайтбокс */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.lightbox.active {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 1em;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* Кнопки навигации лайтбокса */
+.lightbox-nav {
+    display: none;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 1em;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: all 0.3s;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.lightbox-nav:hover {
+    background-color: var(--button-hover-color);
+    color: var(--button-hover-text-color);
+}
+
+.lightbox-nav.prev {
+    left: 20px;
+}
+
+.lightbox-nav.next {
+    right: 20px;
+}
+
+@media (max-width: 600px) {
+    .lightbox-nav {
+        width: 32px;
+        height: 32px;
+        font-size: 1em;
+    }
+    .lightbox-nav.prev {
+        left: 10px;
+    }
+    .lightbox-nav.next {
+        right: 10px;
+    }
 }
 
 /* Раздел требуемых ресурсов */
@@ -414,6 +494,11 @@ header .header-subtitle {
     .schematic-details h2 {
         font-size: 1.5em;
     }
+
+    .lightbox img {
+        max-width: 95vw;
+        max-height: 95vh;
+    }
 }
 
 @media (max-width: 600px) {
@@ -428,5 +513,10 @@ header .header-subtitle {
     .add-form input,
     .add-form textarea {
         padding: 8px;
+    }
+
+    .lightbox img {
+        max-width: 98vw;
+        max-height: 98vh;
     }
 }
