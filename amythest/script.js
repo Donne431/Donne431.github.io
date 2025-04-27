@@ -96,6 +96,37 @@ const schematics = [
         ]
     },
     {
+        title: "Автосоздание теста",
+        description: "Схематика, создающая тесто.",
+        detailedDescription: "Схематика механизма, создающего тесто. Требует пшеницу (и воду (если выбрать схематику с водой извне)) извне. Из лишних семян делается костная мука (В соотношении 64 теста к 1 костной муке). Масштаб: 4х3х6 (ДхШхВ)",
+        tags: ["автосборка", "тесто", "костная мука", "1.20.1", "0.5.1"],
+        image: "/img/amythest/auto_dough_maker.nbt-1.png",
+        images: [
+            "/img/amythest/auto_dough_maker.nbt-1.png",
+            "/img/amythest/auto_dough_maker.nbt-2.png"
+        ],
+        downloads: [
+            { name: "auto_dough_maker.nbt", description: "Схематика (с водой извне)", url: "/files/amythest/auto_dough_maker.nbt" },
+            { name: "auto_dough_maker_without_out_water.nbt", description: "Схематика (без воды извне)", url: "/files/amythest/auto_dough_maker_without_out_water.nbt" }
+        ],
+        resources: [
+            { text: "Автономный активатор х1", icon: "/img/minecraft/64x/автономный-активатор.png" },
+            { text: "Вал х3", icon: "/img/minecraft/64x/вал.png" },
+            { text: "Воронка х3", icon: "/img/minecraft/64x/воронка.png" },
+            { text: "Дубовые ступеньки х3 (Схематика без воды извне)", icon: "/img/minecraft/64x/дубовые-ступеньки.png" },
+            { text: "Жидкостная труба х2", icon: "/img/minecraft/64x/жидкостная-труба.png" },
+            { text: "Жёрнов х1", icon: "/img/minecraft/64x/жёрнов.png" },
+            { text: "Компостница х1", icon: "/img/minecraft/64x/компостница.png" },
+            { text: "Коробка передач х1", icon: "/img/minecraft/64x/коробка-передач.png" },
+            { text: "Латунный шлюз х6", icon: "/img/minecraft/64x/латунный-шлюз.png" },
+            { text: "Механическая помпа х1", icon: "/img/minecraft/64x/механическая-помпа.png" },
+            { text: "Механический смешиватель х1", icon: "/img/minecraft/64x/механический-смешиватель.png" },
+            { text: "Сундук х4", icon: "/img/minecraft/64x/сундук.png" },
+            { text: "Чаша х1", icon: "/img/minecraft/64x/чаша.png" },
+            { text: "Шестерня х7", icon: "/img/minecraft/64x/шестерня.png" }
+        ]
+    },
+    {
         title: "Двигатель | Alpha",
         description: "Двигатель на 147к ен, требующий лаву извне",
         detailedDescription: "Схематика двигателя, разработанного мной. Для запуска требует 2560ен. Требует лаву извне. Подключение нескольких двигателей происходит через вверх (через башню из коробок передач). Масштаб: 6х4х7 (ДхШхВ)",
@@ -170,7 +201,8 @@ function filterSchematics() {
         ? schematics
         : schematics.filter(s => selectedTags.every(tag => s.tags.includes(tag)));
 
-    filtered.forEach((s, index) => {
+    filtered.forEach(s => {
+        const originalIndex = schematics.indexOf(s);
         const card = document.createElement('div');
         card.classList.add('schematic-card');
         card.innerHTML = `
@@ -179,7 +211,7 @@ function filterSchematics() {
                 <h3>${s.title}</h3>
                 <p>${s.description}</p>
                 <div class="tags">${s.tags.join(', ')}</div>
-                <a href="schematic.html?id=${index}" class="open-button">Открыть</a>
+                <a href="schematic.html?id=${originalIndex}" class="open-button">Открыть</a>
             </div>
         `;
         grid.appendChild(card);
