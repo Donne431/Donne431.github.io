@@ -1,64 +1,126 @@
 const schematics = [
     {
-        title: "Электрическая схема",
-        description: "Простая схема для домашнего использования.",
-        detailedDescription: "Эта схема предназначена для создания базовой электрической системы в жилом доме. Она включает подключение розеток, выключателей и распределительного щита, обеспечивая безопасность и эффективность.",
-        tags: ["электрика", "дом", "простая"],
-        image: "/img/placeholders/purple_place_holder.png",
+        title: "Автосборка корпусов",
+        description: "Автосборка андезитов/латунных/медных корпусов",
+        detailedDescription: "Схематика механизма автосборки корпусов, для которых требуется 1 вид материала + обтёсанное бревно. Масштаб: 4х2х4 (ДхШхВ)",
+        tags: ["автосборка", "корпуса", "1.20.1", "0.5.1"],
+        image: "/img/amythest/andesite_brass_copper_casing_maker+.nbt-1.png",
         images: [
-            "/img/placeholders/purple_place_holder.png",
-            "/img/placeholders/purple_place_holder.png"
+            "/img/amythest/andesite_brass_copper_casing_maker+.nbt-1.png",
+            "/img/amythest/andesite_brass_copper_casing_maker+.nbt-2.png"
         ],
         downloads: [
-            { name: "Схема.pdf", description: "Файл с полной схемой в формате PDF", url: "#" },
-            { name: "Инструкция.docx", description: "Инструкция по установке", url: "#" }
+            { name: "andesite_brass_copper_casing_maker+.nbt", description: "Схематика v2", url: "/files/amythest/andesite_brass_copper_casing_maker+.nbt" }
         ],
         resources: [
-            { text: "Медные провода 2.5 мм²", icon: "/img/themes/active/favicon.png" },
-            { text: "Розетки и выключатели", icon: null },
-            { text: "Распределительный щит", icon: "https://via.placeholder.com/16/FF0000" },
-            { text: "Мультиметр", icon: null }
+            { text: "Автономный активатор x1", icon: "/img/minecraft/64x/автономный-активатор.png" },
+            { text: "Вал x2", icon: "/img/minecraft/64x/вал.png" },
+            { text: "Воронка x1", icon: "/img/minecraft/64x/воронка.png" },
+            { text: "Коробка передач х6", icon: "/img/minecraft/64x/коробка-передач.png" },
+            { text: "Латунный шлюз x1", icon: "/img/minecraft/64x/латунный-шлюз.png" },
+            { text: "Механическая пила x1", icon: "/img/minecraft/64x/механическая-пила.png" },
+            { text: "Механический ремень x1", icon: "/img/minecraft/64x/механический-ремень.png" },
+            { text: "Сундук x5", icon: "/img/minecraft/64x/сундук.png" },
+            { text: "Умный жёлоб x1", icon: "/img/minecraft/64x/умный-жёлоб.png" },
+            { text: "Фильтр атрибутов x1", icon: "/img/minecraft/64x/фильтр-атрибутов.png" },
+            { text: "Фильтр предметов x1", icon: "/img/minecraft/64x/фильтр-предметов.png" }
         ]
     },
     {
-        title: "Схема освещения",
-        description: "Схема для системы освещения офиса.",
-        detailedDescription: "Данная схема разработана для офисных помещений, обеспечивая оптимальное освещение с использованием энергоэффективных LED-светильников. Включает план размещения и подключения.",
-        tags: ["освещение", "офис", "электрика"],
-        image: "/img/placeholders/purple_place_holder.png",
+        title: "Ферма опыта | Чешуйницы | Batsy",
+        description: "Ферма опыта на чешуйницах от Batsy (модифицированная)",
+        detailedDescription: "Схематика фермы опыта на чешуйницах от Batsy, была модифицирована для быстрого развёртывания. Масштаб: 12x12x9 (ДхШхВ)",
+        tags: ["ферма", "ферма опыта", "чешуйницы", "1.20.1", "0.5.1"],
+        image: "/img/amythest/batsy_exp_farm_reverse.nbt-1.png",
         images: [
-            "/img/placeholders/purple_place_holder.png"
+            "/img/amythest/batsy_exp_farm_reverse.nbt-1.png",
+            "/img/amythest/batsy_exp_farm_reverse.nbt-2.png"
         ],
         downloads: [
-            { name: "План.pdf", description: "План размещения светильников", url: "#" }
+            { name: "batsy_exp_farm_reverse.nbt", description: "Схематика reverse", url: "/files/amythest/batsy_exp_farm_reverse.nbt" }
         ],
         resources: [
-            { text: "LED-светильники 20 Вт", icon: "https://via.placeholder.com/16" },
-            { text: "Кабель ВВГ 3x1.5", icon: null },
-            { text: "Автоматический выключатель", icon: null },
-            { text: "Монтажные коробки", icon: "https://via.placeholder.com/16/00FF00" }
+            { text: "Автономный активатор x27", icon: "/img/minecraft/64x/автономный-активатор.png" },
+            { text: "Андезитовый корпус х89", icon: "/img/minecraft/64x/андезитовый-корпус.png" },
+            { text: "Андезитовый шлюз х12", icon: "/img/minecraft/64x/андезитовый-шлюз.png" },
+            { text: "Бочка х1", icon: "/img/minecraft/64x/бочка.png" },
+            { text: "Вагонетка х1", icon: "/img/minecraft/64x/вагонетка.png" },
+            { text: "Вагонеточный сборщик х1", icon: "/img/minecraft/64x/вагонеточный-сборщик.png" },
+            { text: "Вал х23", icon: "/img/minecraft/64x/вал.png" },
+            { text: "Вал линейного привода х4", icon: "/img/minecraft/64x/вал-линейного-привода.png" },
+            { text: "Вентилятор в корпусе х2", icon: "/img/minecraft/64x/вентилятор-в-корпусе.png" },
+            { text: "Дубовый люк х12", icon: "/img/minecraft/64x/дубовый-люк.png" },
+            { text: "Еловый люк х8", icon: "/img/minecraft/64x/еловый-люк.png" },
+            { text: "Жидкостный бак х9", icon: "/img/minecraft/64x/жидкостный-бак.png" },
+            { text: "Жёлоб х27", icon: "/img/minecraft/64x/жёлоб.png" },
+            { text: "Каменная нажимная плита х2", icon: "/img/minecraft/64x/каменная-нажимная-плита.png" },
+            { text: "Каретка линейного привода х2", icon: "/img/minecraft/64x/каретка-линейного-привода.png" },
+            { text: "Коробка передач х5", icon: "/img/minecraft/64x/коробка-передач.png" },
+            { text: "Костёр душ х1", icon: "/img/minecraft/64x/костёр-душ.png" },
+            { text: "Латунный шлюз х6", icon: "/img/minecraft/64x/латунный-шлюз.png" },
+            { text: "Лианы х1", icon: "/img/minecraft/64x/лианы.png" },
+            { text: "Линейное шасси х29", icon: "/img/minecraft/64x/линейное-шасси.png" },
+            { text: "Механическая помпа х9", icon: "/img/minecraft/64x/механическая-помпа.png" },
+            { text: "Механический ремень х8", icon: "/img/minecraft/64x/механический-ремень.png" },
+            { text: "Питаемый рычаг х1", icon: "/img/minecraft/64x/питаемый-рычаг.png" },
+            { text: "Плита из каменного кирпича х18", icon: "/img/minecraft/64x/плита-из-каменного-кирпича.png" },
+            { text: "Реверсивная передача х2", icon: "/img/minecraft/64x/реверсивная-передача.png" },
+            { text: "Редстоуновая пыль х4", icon: "/img/minecraft/64x/редстоуновая-пыль.png" },
+            { text: "Редстоуновый передатчик сигнала х2", icon: "/img/minecraft/64x/редстоуновый-передатчик-сигнала.png" },
+            { text: "Редстоуновый удлинитель импульса х2", icon: "/img/minecraft/64x/редстоуновый-удлинитель-импульса.png" },
+            { text: "Рельсы х1", icon: "/img/minecraft/64x/рельсы.png" },
+            { text: "Рычаг х5", icon: "/img/minecraft/64x/рычаг.png" },
+            { text: "Стекло х63", icon: "/img/minecraft/64x/стекло.png" },
+            { text: "Стойка для брони х1", icon: "/img/minecraft/64x/стойка-для-брони.png" },
+            { text: "Суперклей х1", icon: "/img/minecraft/64x/суперклей.png" },
+            { text: "Сцепление х1", icon: "/img/minecraft/64x/сцепление.png" },
+            { text: "Хранилище предметов х89", icon: "/img/minecraft/64x/хранилище-предметов.png" },
+            { text: "Цепной привод в корпусе х13", icon: "/img/minecraft/64x/цепной-привод-в-корпусе.png" },
+            { text: "Шестерня х2", icon: "/img/minecraft/64x/шестерня.png" }
         ]
     },
     {
-        title: "Схема двигателя",
-        description: "Схема для управления электродвигателем.",
-        detailedDescription: "Схема для автоматизированного управления электродвигателем мощностью 1.5 кВт с использованием контроллера Siemens S7-1200. Подходит для промышленных приложений.",
-        tags: ["двигатель", "автоматизация"],
-        image: "/img/placeholders/purple_place_holder.png",
+        title: "Горелка всплоха с соломкой",
+        description: "Да, просто горелка всплоха с соломкой",
+        detailedDescription: "Схематика, которая содержит лишь 1 блок - горелка всполоха с соломкой из Create: Crafts & Additions. Масштаб: 1х1х1 (ДхШхВ)",
+        tags: ["1.20.1", "0.5.1"],
+        image: "/img/amythest/blaze_burner_with_straw.nbt-1.png",
         images: [
-            "/img/placeholders/purple_place_holder.png",
-            "/img/placeholders/purple_place_holder.png",
-            "/img/placeholders/purple_place_holder.png"
+            "/img/amythest/blaze_burner_with_straw.nbt-1.png"
         ],
         downloads: [
-            { name: "Контроллер.pdf", description: "Схема контроллера двигателя", url: "#" },
-            { name: "Настройки.xlsx", description: "Таблица настроек", url: "#" }
+            { name: "blaze_burner_with_straw.nbt", description: "Схематика", url: "/files/amythest/blaze_burner_with_straw.nbt" }
         ],
         resources: [
-            { text: "Электродвигатель 1.5 кВт", icon: "https://via.placeholder.com/16" },
-            { text: "Контроллер Siemens S7-1200", icon: null },
-            { text: "Кабель силовой 3x2.5", icon: null },
-            { text: "Тестер для проверки", icon: "https://via.placeholder.com/16/0000FF" }
+            { text: "Горелка всплоха х1", icon: "/img/minecraft/64x/горелка-всполоха.png" }
+        ]
+    },
+    {
+        title: "Двигатель | Alpha",
+        description: "Двигатель на 147к ен, требующий лаву извне",
+        detailedDescription: "Схематика двигателя, разработанного мной. Для запуска требует 2560ен. Требует лаву извне. Подключение нескольких двигателей происходит через вверх (через башню из коробок передач). Масштаб: 6х4х7 (ДхШхВ)",
+        tags: ["двигатель", "1.20.1", "0.5.1"],
+        image: "/img/amythest/my_engine_alpha_0_0_2.nbt-1.png",
+        images: [
+            "/img/amythest/my_engine_alpha_0_0_2.nbt-1.png",
+            "/img/amythest/my_engine_alpha_0_0_2.nbt-2.png"
+        ],
+        downloads: [
+            { name: "my_engine_alpha_0_0_2.nbt", description: "Схематика Alpha v.0.0.2", url: "/files/amythest/my_engine_alpha_0_0_2.nbt" }
+        ],
+        resources: [
+            { text: "Большая шестерня х1", icon: "/img/minecraft/64x/большая-шестерня.png" },
+            { text: "Вал х9", icon: "/img/minecraft/64x/вал.png" },
+            { text: "Горелка всполоха х9", icon: "/img/minecraft/64x/горелка-всполоха.png" },
+            { text: "Дубовые ступеньки х5", icon: "/img/minecraft/64x/дубовые-ступеньки.png" },
+            { text: "Жидкостная труба х18", icon: "/img/minecraft/64x/жидкостная-труба.png" },
+            { text: "Жидкостный бак х36", icon: "/img/minecraft/64x/жидкостный-бак.png" },
+            { text: "Катушка со шлангом х1", icon: "/img/minecraft/64x/катушка-со-шлангом.png" },
+            { text: "Коробка передач х11", icon: "/img/minecraft/64x/коробка-передач.png" },
+            { text: "Механическая помпа х2", icon: "/img/minecraft/64x/механическая-помпа.png" },
+            { text: "Паровой двигатель х9", icon: "/img/minecraft/64x/паровой-двигатель.png" },
+            { text: "Регулятор скорости вращения х1", icon: "/img/minecraft/64x/регулятор-скорости-вращения.png" },
+            { text: "Шестерня х3", icon: "/img/minecraft/64x/шестерня.png" },
         ]
     }
 ];

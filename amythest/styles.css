@@ -330,11 +330,13 @@ header .header-subtitle {
     display: flex;
     align-items: center;
     gap: 8px;
+    line-height: normal;
+    justify-content: flex-start;
 }
 
 .schematic-details .resources-section li img {
-    width: 1em;
-    height: 1em;
+    width: 2em;
+    height: 2em;
     object-fit: contain;
 }
 
