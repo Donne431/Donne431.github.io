@@ -166,10 +166,10 @@ const schematics = [
             "/img/amythest/dome_base-3.png"
         ],
         downloads: [
-            { name: "base_sever_vostok.nbt", description: "Северо-Восток", url: "/files/amythest/base_sever_vostok.nbt" },
-            { name: "base_sever_zapad.nbt", description: "Северо-Запад", url: "/files/amythest/base_sever_zapad.nbt" },
-            { name: "base_yug_vostok.nbt", description: "Юго-Восток", url: "/files/amythest/base_yug_vostok.nbt" },
-            { name: "base_yug_zapad.nbt", description: "Юго-Запад", url: "/files/amythest/base_yug_zapad.nbt" },
+            { name: "base_sever_vostok.nbt", description: "Северо-Восточная часть", url: "/files/amythest/base_sever_vostok.nbt" },
+            { name: "base_sever_zapad.nbt", description: "Северо-Западная часть", url: "/files/amythest/base_sever_zapad.nbt" },
+            { name: "base_yug_vostok.nbt", description: "Юго-Восточная часть", url: "/files/amythest/base_yug_vostok.nbt" },
+            { name: "base_yug_zapad.nbt", description: "Юго-Западная часть", url: "/files/amythest/base_yug_zapad.nbt" },
             { name: "base_stolb.nbt", description: "Столб", url: "/files/amythest/base_stolb.nbt" },
             { name: "base_stolb_bigger1.nbt", description: "Столб (Увеличенная версия)", url: "/files/amythest/base_stolb_bigger1.nbt" },
             { name: "base_stolb_bigger2.nbt", description: "Столб (Увеличенная+ версия)", url: "/files/amythest/base_stolb_bigger2.nbt" },
