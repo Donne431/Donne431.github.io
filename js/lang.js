@@ -1,7 +1,5 @@
 // Объект для хранения переводов
 let translations = {};
-// Текущий язык
-let currentLang = localStorage.getItem('preferredLanguage') || 'en';
 // Доступные языки
 const languageList = [
   { code: 'en', flag: '🇬🇧' },
@@ -11,17 +9,25 @@ const languageList = [
 // Загрузка переводов
 async function loadTranslation(lang) {
   try {
+    console.log(`Attempting to load translations for ${lang}`);
     const response = await fetch(`lang/${lang}.json`);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch lang/${lang}.json: ${response.status}`);
+    }
     translations[lang] = await response.json();
-    console.log(`Translations loaded for ${lang}`);
+    console.log(`Translations loaded for ${lang}:`, translations[lang]);
   } catch (error) {
-    console.error('Error loading translations:', error);
+    console.error(`Error loading translations for ${lang}:`, error);
   }
 }
 
 // Применение переводов
 function applyTranslations(lang) {
   console.log(`Applying translations for ${lang}`);
+  if (!translations[lang]) {
+    console.warn(`No translations available for ${lang}, skipping`);
+    return;
+  }
   document.querySelectorAll('[data-translate]').forEach(element => {
     const key = element.getAttribute('data-translate');
     const keys = key.split('.');
@@ -32,35 +38,4 @@ function applyTranslations(lang) {
     element.textContent = translation || element.textContent;
   });
   // Обновление флага
-  const langInfo = languageList.find(l => l.code === lang);
-  document.getElementById('flag').textContent = langInfo.flag;
-  // Обновление атрибута lang для SEO
-  document.documentElement.lang = lang;
-}
-
-// Переключение языка
-async function toggleLanguage() {
-  console.log(`Current language: ${currentLang}`);
-  // Находим индекс текущего языка
-  const currentIndex = languageList.findIndex(l => l.code === currentLang);
-  // Переключаем на следующий язык (циклически)
-  const nextIndex = (currentIndex + 1) % languageList.length;
-  const nextLang = languageList[nextIndex].code;
-  console.log(`Switching to: ${nextLang}`);
-
-  if (!translations[nextLang]) {
-    await loadTranslation(nextLang);
-  }
-  applyTranslations(nextLang);
-  // Обновляем текущий язык
-  currentLang = nextLang;
-  // Сохранение выбранного языка
-  localStorage.setItem('preferredLanguage', nextLang);
-}
-
-// Инициализация
-(async () => {
-  console.log(`Initializing with language: ${currentLang}`);
-  await loadTranslation(currentLang);
-  applyTranslations(currentLang);
-})();
+  const langInfo =
