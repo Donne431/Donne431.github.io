@@ -1,5 +1,9 @@
 {
   "index": {
-    "about_me": "Hi, my nickname is Donne431, I just a guy, who love made a modifications for games. I'm 16 years old, and I'm from Crimea, Russia (demi-island washed by the Black and Azov Sea). I also like to create almost any content for Minecraft, that is: mods, maps, resource packs, servers."
+    "about_me":
+      {
+        "title": "About me",
+        "text": "Hi, my nickname is Donne431, I just a guy, who love made a modifications for games. I'm 16 years old, and I'm from Crimea, Russia (demi-island washed by the Black and Azov Sea). I also like to create almost any content for Minecraft, that is: mods, maps, resource packs, servers."
+      }
   }
 }
