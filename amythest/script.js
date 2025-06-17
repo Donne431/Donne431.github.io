@@ -179,6 +179,51 @@ const schematics = [
             { text: "Колотый глубинный сланец х28.008 (~438 стаков) [Минимальная комплектация]", icon: "/img/minecraft/64x/колотый-глубинный-сланец.png" },
             { text: "Стекло х19.416 (~304 стаков)", icon: "/img/minecraft/64x/стекло.png" }
         ]
+    },
+    {
+        title: "Ферма опыта | Чешуйницы | Глубиносланец",
+        description: "Ферма опыта на чешуйницах из глубинносланца",
+        detailedDescription: "Схематика фермы опыта на чешуйницах сделанная из резного глубинносланцевого кирпича. Масштаб: 11x5x14 (ДхШхВ)",
+        tags: ["ферма", "ферма опыта", "чешуйницы", "1.20.1", "0.5.1"],
+        image: "/img/amythest/oc_xp_farm_m1-v2-deepslate.nbt-1.png",
+        images: [
+            "/img/amythest/oc_xp_farm_m1-v2-deepslate.nbt-1.png",
+            "/img/amythest/oc_xp_farm_m1-v2-deepslate.nbt-2.png"
+        ],
+        downloads: [
+            { name: "oc_xp_farm_m1-v2-deepslate.nbt", description: "Схематика", url: "/files/amythest/oc_xp_farm_m1-v2-deepslate.nbt" }
+        ],
+        resources: [
+            { text: "Автономный активатор x27", icon: "/img/minecraft/64x/автономный-активатор.png" },
+            { text: "Большая шестерня х2", icon: "/img/minecraft/64x/большая-шестерня.png"},
+            { text: "Вагонеточный сборщик х2", icon: "/img/minecraft/64x/вагонеточный-сборщик.png"},
+            { text: "Вал х4", icon: "/img/minecraft/64x/вал.png"},
+            { text: "Вентилятор в корпусе х2", icon: "/img/minecraft/64x/вентилятор-в-корпусе.png"},
+            { text: "Воронка х27", icon: "/img/minecraft/64x/воронка.png"},
+            { text: "Депо х4", icon: "/img/minecraft/64x/депо.png"},
+            { text: "Жидкостный бак х27", icon: "/img/minecraft/64x/жидкостный-бак.png"},
+            { text: "Заполняемая панель х1", icon: "/img/minecraft/64x/заполняемая-панель.png"},
+            { text: "Коробка передач х3", icon: "/img/minecraft/64x/коробка-передач.png"},
+            { text: "Костёр душ х1", icon: "/img/minecraft/64x/костёр-душ.png"},
+            { text: "Латунный шлюз х5", icon: "/img/minecraft/64x/латунный-шлюз.png"},
+            { text: "Линейное шасси х4", icon: "/img/minecraft/64x/линейное-шасси.png"},
+            { text: "Механическая помпа х27", icon: "/img/minecraft/64x/механическая-помпа.png"},
+            { text: "Механическая рука х2", icon: "/img/minecraft/64x/механическая-рука.png"},
+            { text: "Обрамлённое стекло х81", icon: "/img/minecraft/64x/обрамлённое-стекло.png"},
+            { text: "Парус ветряной мельницы х27", icon: "/img/minecraft/64x/парус-ветряной-мельницы.png"},
+            { text: "Пороговый переключатель х1", icon: "/img/minecraft/64x/пороговый-переключатель.png"},
+            { text: "Рама паруса ветряной мельницы х27", icon: "/img/minecraft/64x/рама-парус-ветряной-мельницы.png"},
+            { text: "Регулятор скорости вращения х2", icon: "/img/minecraft/64x/регулятор-скорости-вращения.png"},
+            { text: "Редстоуновый блок х2", icon: "/img/minecraft/64x/редстоуновый-блок.png"},
+            { text: "Резные глубинносланцевые кирпичи х283", icon: "/img/minecraft/64x/резные-глубинносланцевые-кирпичи.png"},
+            { text: "Рельсы х2", icon: "/img/minecraft/64x/рельсы.png"},
+            { text: "Рычаг х2", icon: "/img/minecraft/64x/рычаг.png"},
+            { text: "Суперклей х1", icon: "/img/minecraft/64x/суперклей.png"},
+            { text: "Хранилище предметов х81", icon: "/img/minecraft/64x/хранилище-предметов.png"},
+            { text: "Цепной привод в корпусе х4", icon: "/img/minecraft/64x/цепной-привод-в-корпусе.png"},
+            { text: "Шестерня х13", icon: "/img/minecraft/64x/шестерня.png"},
+            { text: "Вагонетка х2", icon: "/img/minecraft/64x/вагонетка.png"}
+        ]
     }
 ];
 
