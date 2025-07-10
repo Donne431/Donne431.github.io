@@ -26,6 +26,7 @@
   height: 5em;
   width: auto;
   vertical-align: middle;
+  border-radius: 0 !important;
 }
 
 .image-x10 {
