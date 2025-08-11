@@ -269,7 +269,6 @@ header .header-subtitle {
 .schematic-details .description {
     font-size: 1em;
     color: var(--dark-text-color);
-    margin-bottom: 20px;
 }
 
 .schematic-details .tags {
@@ -420,6 +419,39 @@ header .header-subtitle {
     object-fit: contain;
 }
 
+/* Раздел требуемых модов */
+.schematic-details .mods-section {
+    margin-bottom: 30px;
+}
+
+.schematic-details .mods-section h3 {
+    font-size: 1.5em;
+    color: var(--dark-text-color);
+    margin-bottom: 15px;
+}
+
+.schematic-details .mods-section ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.schematic-details .mods-section li {
+    font-size: 1em;
+    color: var(--dark-text-color);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: normal;
+    justify-content: flex-start;
+}
+
+.schematic-details .mods-section li img {
+    width: 2em;
+    height: 2em;
+    object-fit: contain;
+}
+
 /* Раздел ссылок на скачивание */
 .schematic-details .downloads-section {
     margin-bottom: 30px;
@@ -432,11 +464,19 @@ header .header-subtitle {
 }
 
 .schematic-details .downloads-section ul {
-    list-style: none;
+    list-style: disc;
+    padding-left: 20px;
 }
 
 .schematic-details .downloads-section li {
+    font-size: 1em;
+    color: var(--dark-text-color);
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: normal;
+    justify-content: flex-start;
 }
 
 .schematic-details .downloads-section a {
@@ -454,6 +494,12 @@ header .header-subtitle {
     font-size: 0.9em;
     color: var(--dark-text-color);
     margin-left: 10px;
+}
+
+.schematic-details .downloads-section li img {
+    width: 2em;
+    height: 2em;
+    object-fit: contain;
 }
 
 /* Кнопка "Назад" */

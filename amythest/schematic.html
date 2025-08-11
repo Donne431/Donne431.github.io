@@ -76,13 +76,26 @@
                             `).join('')}
                         </ul>
                     </div>
+                    <div class="mods-section">
+                        <h3>Требуемые моды</h3>
+                        <ul>
+                            ${schematic.mods.map(mod => `
+                                <li>
+                                    ${mod.icon ? `<img src="${mod.icon}" alt="Иконка ${mod.text}">` : ''}
+                                    ${mod.text}
+                                    ${mod.version ? `v.${mod.version}` : ''}
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
                     <div class="downloads-section">
                         <h3>Ссылки на скачивание</h3>
                         <ul>
                             ${schematic.downloads.map(file => `
                                 <li>
+                                    <img src="/img/minecraft/64x/схематика.png">
                                     <a href="${file.url}" target="_blank">${file.name}</a>
-                                    <span class="description">${file.description}</span>
+                                    <strong class="description">${file.description}</strong>
                                 </li>
                             `).join('')}
                         </ul>

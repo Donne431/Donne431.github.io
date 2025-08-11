@@ -24,6 +24,10 @@ const schematics = [
             { text: "Умный жёлоб x1", icon: "/img/minecraft/64x/умный-жёлоб.png" },
             { text: "Фильтр атрибутов x1", icon: "/img/minecraft/64x/фильтр-атрибутов.png" },
             { text: "Фильтр предметов x1", icon: "/img/minecraft/64x/фильтр-предметов.png" }
+        ],
+        mods: [
+            { text: "Minecraft", icon: "/img/logo-icon/logo_minecraft.png", version: "1.20.1" },
+            { text: "Create", icon: "/img/logo-icon/logo_create.png", version: "0.5.1j" }
         ]
     },
     {
@@ -77,6 +81,10 @@ const schematics = [
             { text: "Хранилище предметов х89", icon: "/img/minecraft/64x/хранилище-предметов.png" },
             { text: "Цепной привод в корпусе х13", icon: "/img/minecraft/64x/цепной-привод-в-корпусе.png" },
             { text: "Шестерня х2", icon: "/img/minecraft/64x/шестерня.png" }
+        ],
+        mods: [
+            { text: "Minecraft", icon: "/img/logo-icon/logo_minecraft.png", version: "1.20.1" },
+            { text: "Create", icon: "/img/logo-icon/logo_create.png", version: "0.5.1j" }
         ]
     },
     {
@@ -93,6 +101,11 @@ const schematics = [
         ],
         resources: [
             { text: "Горелка всплоха х1", icon: "/img/minecraft/64x/горелка-всполоха.png" }
+        ],
+        mods: [
+            { text: "Minecraft", icon: "/img/logo-icon/logo_minecraft.png", version: "1.20.1" },
+            { text: "Create", icon: "/img/logo-icon/logo_create.png", version: "0.5.1j" },
+            { text: "Create: Crafts & Additions", icon: "/img/logo-icon/logo_create_crafts_and_additions.png", version: "" }
         ]
     },
     {
@@ -124,6 +137,10 @@ const schematics = [
             { text: "Сундук х4", icon: "/img/minecraft/64x/сундук.png" },
             { text: "Чаша х1", icon: "/img/minecraft/64x/чаша.png" },
             { text: "Шестерня х7", icon: "/img/minecraft/64x/шестерня.png" }
+        ],
+        mods: [
+            { text: "Minecraft", icon: "/img/logo-icon/logo_minecraft.png", version: "1.20.1" },
+            { text: "Create", icon: "/img/logo-icon/logo_create.png", version: "0.5.1j" }
         ]
     },
     {
@@ -152,6 +169,11 @@ const schematics = [
             { text: "Паровой двигатель х9", icon: "/img/minecraft/64x/паровой-двигатель.png" },
             { text: "Регулятор скорости вращения х1", icon: "/img/minecraft/64x/регулятор-скорости-вращения.png" },
             { text: "Шестерня х3", icon: "/img/minecraft/64x/шестерня.png" },
+        ],
+        mods: [
+            { text: "Minecraft", icon: "/img/logo-icon/logo_minecraft.png", version: "1.20.1" },
+            { text: "Create", icon: "/img/logo-icon/logo_create.png", version: "0.5.1j" },
+            { text: "Create: Crafts & Additions", icon: "/img/logo-icon/logo_create_crafts_and_additions.png", version: "" }
         ]
     },
     {
@@ -178,6 +200,10 @@ const schematics = [
         resources: [
             { text: "Колотый глубинный сланец х28.008 (~438 стаков) [Минимальная комплектация]", icon: "/img/minecraft/64x/колотый-глубинный-сланец.png" },
             { text: "Стекло х19.416 (~304 стаков)", icon: "/img/minecraft/64x/стекло.png" }
+        ],
+        mods: [
+            { text: "Minecraft", icon: "/img/logo-icon/logo_minecraft.png", version: "1.20.1" },
+            { text: "Create", icon: "/img/logo-icon/logo_create.png", version: "0.5.1j" }
         ]
     },
     {
@@ -223,6 +249,10 @@ const schematics = [
             { text: "Цепной привод в корпусе х4", icon: "/img/minecraft/64x/цепной-привод-в-корпусе.png"},
             { text: "Шестерня х13", icon: "/img/minecraft/64x/шестерня.png"},
             { text: "Вагонетка х2", icon: "/img/minecraft/64x/вагонетка.png"}
+        ],
+        mods: [
+            { text: "Minecraft", icon: "/img/logo-icon/logo_minecraft.png", version: "1.20.1" },
+            { text: "Create", icon: "/img/logo-icon/logo_create.png", version: "0.5.1j" }
         ]
     }
 ];
@@ -335,7 +365,7 @@ function addSchematic() {
             tags,
             image,
             images,
-            downloads: downloads.length > 0 ? downloads : [{ name: "Новая_схема.pdf", description: "Файл с новой схемой", url: "#" }],
+            downloads: downloads.length > 0 ? downloads : [{ name: "Новая_схема.nbt", description: "Файл с новой схемой", url: "#" }],
             resources: resources.length > 0 ? resources : [{ text: "Материалы не указаны", icon: null }]
         });
         document.getElementById('new-title').value = '';

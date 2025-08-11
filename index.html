@@ -18,7 +18,6 @@
   <script src="config.js"></script>
   <script src="js/lightbox.min.js"></script>
   <script src="https://donorbox.org/widget.js" paypalExpress="false"></script>
-  <script type="text/javascript" src="js/lang/home.js"></script>
 
   <script>tosAgreed = true</script>
 
@@ -27,8 +26,54 @@
   <link rel="stylesheet" href="css/blog.css">
   <link rel="stylesheet" href="config.css">
   <link href="css/lightbox.css" rel="stylesheet" media="all">
-
+  <style>
+    /* Стили для позиционирования логотипа и кнопки */
+    .header-container {
+      position: relative;
+      text-align: center;
+      padding-top: 3%;
+    }
+    #toggle-language {
+      position: absolute;
+      right: 12%; /* Отступ справа */
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #fff;
+      background: linear-gradient(135deg, #292c31 0%, #24272b 100%);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      z-index: 10; /* На случай перекрытия другими элементами */
+    }
+    #toggle-language:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(135deg, #5cc1ff 0%, #3a8ee8 100%);
+    }
+    #toggle-language:active {
+      transform: translateY(0);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    }
+    #toggle-language i {
+      font-size: 18px;
+    }
+    /* Адаптивность */
+    @media (max-width: 600px) {
+      #toggle-language {
+        padding: 10px 16px;
+        font-size: 14px;
+        right: 5px; /* Меньший отступ на мобильных */
+      }
+    }
+  </style>
 </head>
+
 
 <body>
 
@@ -38,7 +83,7 @@
 
   <header>
     <div class="hero" id="hero">
-      <a href="#!"><h1 style="padding-top: 3%;"><img class="locked" src="img/themes/logo.png" width="70%"></h1></a>
+      <a><h1 style="padding-top: 3%;"><img class="locked" src="img/themes/logo.png" width="70%"></h1></a>
     <p> </p>
     <div class="news-card" align="center">
       <a href="wiki" class="btn"><i class="fa-solid fa-book"></i> Wiki</a>
@@ -50,28 +95,32 @@
     </div>
     <p> </p>
     </div>
+    <div class="header-container">
+      <button id="toggle-language"><i class="fa-solid fa-globe"></i> Switch to Russian</button>
+    </div>
+    <p> </p>
   </header>
    
     
      
   <section class="light" id="aboutme">
-    <h1><i class="fa-solid fa-circle-info"></i> Information</h1>
+    <h1><i class="fa-solid fa-circle-info"></i> Information</h1> 
     <p></p>
     <div id="news">
      <div class="news-card2">
-     <h2>About me</h2>
-     <p align="center" style="font-size:28px;color:#fff">
+     <h2 data-translate-key="index.about_me">About me</h2>
+     <p align="center" style="font-size:28px;color:#fff" data-translate-key="index.bio">
      Hi, my nickname is Donne431, I just a guy, who love made a modifications for games. I'm 16 years old, and I'm from Crimea, Russia (demi-island washed by the Black and Azov Sea). I also like to create almost any content for Minecraft, that is: mods, maps, resource packs, servers.
      </div>
      <p> </p>
      <div class="news-card2">
-     <h2>Partners</h2>
+     <h2 data-translate-key="">Partners</h2>
      <p class="lang" key="partners_info" align="center">With regard to the partnership, write to the Discord personal account (@Donne431).</p>
      </div>
      <p> </p>
      <div class="news-card2">
      <h2>Support me by donating</h2>
-     <a href="https://www.donationalerts.com/r/donne431"><img title="DonationAlerts" class="image-x2_5" src="img/donate/donationalerts.png" alt="DonationAlerts"/></a>
+     <a href="https://www.donationalerts.com/r/donne431"><img title="DonationAlerts" class="image-x5" src="img/donate/donationalerts.png" alt="DonationAlerts"/></a>
      </div>
      <p> </p>
      <div class="news-card2">
@@ -132,7 +181,7 @@
       <img class="" src="img/blog/unfreezing-projects/preview.png" width="100%"></a>
       <strong>Unfreezing projects</strong>
       <i>01.06.2025, 17:20</i><br>
-      <a href="blog/unfreezing-projects_01.06.2025.html" class="btn2"><i class="fa-solid fa-book-open-reader"></i> Read</a>
+      <a href="blog/unfreezing-projects_01.06.2025.html" class="btn2" data-translate-key="universal.button.read"><i class="fa-solid fa-book-open-reader"></i> Read</a>
     </div>
     <div class="staff-card2-d">
       <a>MISC</a>
@@ -141,7 +190,7 @@
       <img class="" src="img/blog/freezing-all-projects/preview.png" width="100%"></a>
       <strong>Freezing all projects</strong>
       <i>24.05.2025, 12:40</i><br>
-      <a href="blog/freezing-all-projects_24.05.2025.html" class="btn2"><i class="fa-solid fa-book-open-reader"></i> Read</a>
+      <a href="blog/freezing-all-projects_24.05.2025.html" class="btn2" data-translate-key="universal.button.read"><i class="fa-solid fa-book-open-reader"></i> Read</a>
     </div>
     <div class="staff-card2-d">
       <a>MISC</a>
@@ -150,12 +199,12 @@
       <img class="" src="img/blog/iafd-curseforge-100k/preview.png" width="100%"></a>
       <strong>100k downloads IaFD on Curseforge</strong>
       <i>03.05.2025, 17:00</i><br>
-      <a href="blog/iafd-curseforge-100k.html" class="btn2"><i class="fa-solid fa-book-open-reader"></i> Read</a>
+      <a href="blog/iafd-curseforge-100k.html" class="btn2" data-translate-key="universal.button.read"><i class="fa-solid fa-book-open-reader"></i> Read</a>
     </div>
     </div>
     <p> </p>
     <div class="news-card2" align="center">
-      <a href="blog" class="btn2"><i class="fa-solid fa-hand-pointer"></i> View More</a>
+      <a href="blog" class="btn2" data-translate-key="universal.button.view_more"><i class="fa-solid fa-hand-pointer"></i> View More</a>
       <a href="blog.html#old" class="btn2"><i class="fa-solid fa-hand-pointer"></i> View Old News</a>
     </div>
   </section>
@@ -186,7 +235,7 @@
   </section>
   <section2 class="dark">
     <div class="news-card" align="center">
-      <a href="gallery" class="btn2"><i class="fa-solid fa-hand-pointer"></i> View More</a>
+      <a href="gallery" class="btn2" data-translate-key="universal.button.view_more"><i class="fa-solid fa-hand-pointer"></i> View More</a>
     </div>
   </section2>
 

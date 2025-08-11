@@ -70,14 +70,15 @@ function vote(service, image, link) {
 }
 
 
-var gitalk = new Gitalk({
-  clientID: 'Ov23lilh9pPXu4jiva29',
-  clientSecret: 'edd04e93989a5d43672f72521822508f855c5c13',
-  repo: 'donne431.github.io',      // The repository of store comments,
-  owner: 'Donne431',
-  admin: ['Donne431'],
-  id: location.pathname,      // Ensure uniqueness and length less than 50
-  distractionFreeMode: false  // Facebook-like distraction free mode
-})
+// var gitalk = new Gitalk({
+//   clientID: 'Ov23lilh9pPXu4jiva29',
+//   clientSecret: 'edd04e93989a5d43672f72521822508f855c5c13',
+//   repo: 'donne431.github.io',      // The repository of store comments,
+//   owner: 'Donne431',
+//   admin: ['Donne431'],
+//   id: location.pathname,      // Ensure uniqueness and length less than 50
+//   distractionFreeMode: false  // Facebook-like distraction free mode
+// })
 
-gitalk.render('gitalk-container')
+// gitalk.render('gitalk-container')
+
