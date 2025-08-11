@@ -26,52 +26,6 @@
   <link rel="stylesheet" href="css/blog.css">
   <link rel="stylesheet" href="config.css">
   <link href="css/lightbox.css" rel="stylesheet" media="all">
-  <style>
-    /* Стили для позиционирования логотипа и кнопки */
-    .header-container {
-      position: relative;
-      text-align: center;
-      padding-top: 3%;
-    }
-    #toggle-language {
-      position: absolute;
-      right: 12%; /* Отступ справа */
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 20px;
-      font-size: 16px;
-      font-weight: 500;
-      color: #fff;
-      background: linear-gradient(135deg, #292c31 0%, #24272b 100%);
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-      z-index: 10; /* На случай перекрытия другими элементами */
-    }
-    #toggle-language:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      background: linear-gradient(135deg, #5cc1ff 0%, #3a8ee8 100%);
-    }
-    #toggle-language:active {
-      transform: translateY(0);
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-    }
-    #toggle-language i {
-      font-size: 18px;
-    }
-    /* Адаптивность */
-    @media (max-width: 600px) {
-      #toggle-language {
-        padding: 10px 16px;
-        font-size: 14px;
-        right: 5px; /* Меньший отступ на мобильных */
-      }
-    }
-  </style>
 </head>
 
 
@@ -86,12 +40,12 @@
       <a><h1 style="padding-top: 3%;"><img class="locked" src="img/themes/logo.png" width="70%"></h1></a>
     <p> </p>
     <div class="news-card" align="center">
-      <a href="wiki" class="btn"><i class="fa-solid fa-book"></i> Wiki</a>
-      <a href="#aboutme" class="btn"><i class="fa-solid fa-circle-info"></i> Information</a>
-      <a href="#projects" class="btn"><i class="fa-solid fa-list-ul"></i> Projects</a>
-      <a href="#blog" class="btn"><i class="fa-solid fa-newspaper"></i> Blog</a>
-      <a href="#gallery" class="btn"><i class="fa-solid fa-camera"></i> Gallery</a>
-      <a href="#links" class="btn"><i class="fa-solid fa-share"></i> Links</a>
+      <a href="wiki" class="btn" data-translate-key="universal.wiki"><i class="fa-solid fa-book"></i> Wiki</a>
+      <a href="#aboutme" class="btn"  data-translate-key="universal.information"><i class="fa-solid fa-circle-info"></i> Information</a>
+      <a href="#projects" class="btn"  data-translate-key="universal.projects"><i class="fa-solid fa-list-ul"></i> Projects</a>
+      <a href="#blog" class="btn"  data-translate-key="universal.blog"><i class="fa-solid fa-newspaper"></i> Blog</a>
+      <a href="#gallery" class="btn"  data-translate-key="universal.gallery"><i class="fa-solid fa-camera"></i> Gallery</a>
+      <a href="#links" class="btn" data-translate-key="universal.links"><i class="fa-solid fa-share"></i> Links</a>
     </div>
     <p> </p>
     </div>
@@ -104,7 +58,7 @@
     
      
   <section class="light" id="aboutme">
-    <h1><i class="fa-solid fa-circle-info"></i> Information</h1> 
+    <h1 data-translate-key="universal.information"><i class="fa-solid fa-circle-info"></i> Information</h1> 
     <p></p>
     <div id="news">
      <div class="news-card2">
@@ -126,13 +80,13 @@
      <div class="news-card2">
      <h2>Status</h2>
      <h3>You can find out my nearest plans on page "<i class="fa-solid fa-road"></i> Roadmap"</h3><br>
-     <a href="roadmap" class="btn2"><i class="fa-solid fa-hand-pointer"></i> View Page</a>
+     <a href="roadmap" class="btn2" data-translate-key="universal.button.view_page"><i class="fa-solid fa-hand-pointer"></i> View Page</a>
      </div>
     </div>
   </section>
 
     <section class="dark" id="projects">
-    <h1><i class="fa-solid fa-list-ul"></i> Projects</h1>
+    <h1 data-translate-key="universal.projects"><i class="fa-solid fa-list-ul"></i> Projects</h1>
     <div id="projects-l1" class="grid">
     <div class="staff-card2">
       <a>Mod</a>
@@ -141,8 +95,8 @@
       <strong></strong>
       <img class="locked" src="img/projects/ice_and_fire_delight/logo.png" width="100%">
       <strong></strong>
-      <a href="projects/ice_and_fire_delight/" class="btn2"><i class="fa-solid fa-hand-pointer"></i> View Page</a>
-      <a href="wiki/ice_and_fire_delight/ice-and-fire-delight.html" class="btn2"><i class="fa-solid fa-book-open-reader"></i> Read Wiki</a>
+      <a href="projects/ice_and_fire_delight/" class="btn2" data-translate-key="universal.button.view_page"><i class="fa-solid fa-hand-pointer"></i> View Page</a>
+      <a href="wiki/ice_and_fire_delight/ice-and-fire-delight.html" class="btn2" data-translate-key="universal.button.read_wiki"><i class="fa-solid fa-book-open-reader"></i> Read Wiki</a>
     </div>
     <div class="staff-card2">
       <a>Mod/Datapack</a>
@@ -151,7 +105,7 @@
       <strong></strong>
       <img class="locked" src="img/projects/create_curios_backtank/logo.png" width="100%">
       <strong></strong>
-      <a href="projects/create_curios_backtank.html" class="btn2"><i class="fa-solid fa-hand-pointer"></i> View Page</a>
+      <a href="projects/create_curios_backtank.html" class="btn2" data-translate-key="universal.button.view_page"><i class="fa-solid fa-hand-pointer"></i> View Page</a>
     </div>
     <div class="staff-card2">
       <a>Mod</a>
@@ -160,18 +114,18 @@
       <strong></strong>
       <img class="locked" src="img/projects/create_crushing_quartz/logo.png" width="100%">
       <strong></strong>
-      <a href="https://www.curseforge.com/minecraft/mc-mods/create-crushing-quartz" class="btn2"><i class="fa-solid fa-hand-pointer"></i> View Page</a>
+      <a href="https://www.curseforge.com/minecraft/mc-mods/create-crushing-quartz" class="btn2" data-translate-key="universal.button.view_page"><i class="fa-solid fa-hand-pointer"></i> View Page</a>
     </div>
     </div>
     <p> </p>
     <div class="news-card" align="center">
-      <a href="projects" class="btn2"><i class="fa-solid fa-list-ul"></i> More Pages</a>
-      <a href="wiki" class="btn2"><i class="fa-solid fa-book"></i> More Wiki</a>
+      <a href="projects" class="btn2" data-translate-key="universal.button.more_pages"><i class="fa-solid fa-list-ul"></i> More Pages</a>
+      <a href="wiki" class="btn2" data-translate-key="universal.button.more_wiki"><i class="fa-solid fa-book"></i> More Wiki</a>
     </div>
   </section>
 
   <section class="light">
-    <h1 id="blog"><i class="fa-solid fa-newspaper"></i> Blog</h1>
+    <h1 id="blog" data-translate-key="universal.blog"><i class="fa-solid fa-newspaper"></i> Blog</h1>
     <p align="center">Time zone is UTC+3</p>
     <div id="projects-l1" class="grid">
     <div class="staff-card2-d">
@@ -205,12 +159,12 @@
     <p> </p>
     <div class="news-card2" align="center">
       <a href="blog" class="btn2" data-translate-key="universal.button.view_more"><i class="fa-solid fa-hand-pointer"></i> View More</a>
-      <a href="blog.html#old" class="btn2"><i class="fa-solid fa-hand-pointer"></i> View Old News</a>
+      <a href="blog.html#old" class="btn2" data-translate-key="universal.button.view_old_news"><i class="fa-solid fa-hand-pointer"></i> View Old News</a>
     </div>
   </section>
 
   <section class="dark" id="gallery">
-    <h1><i class="fa-solid fa-camera"></i> Gallery</h1>
+    <h1 data-translate-key="universal.gallery"><i class="fa-solid fa-camera"></i> Gallery</h1>
 
     <div class="grid">
     <div class="staff-card2" id="ytbanner-pc-short">
@@ -240,7 +194,7 @@
   </section2>
 
   <section class="light">
-    <h1><i class="fa-solid fa-share"></i> Links</h1>
+    <h1 data-translate-key="universal.links"><i class="fa-solid fa-share"></i> Links</h1>
     <div id="links" align="center">
       <a href="https://discord.gg/NQBhQRDEhF"><img title="Discord" src="img/links/discord.png" alt="Discord" width="5%" /></a>
       <a href="https://www.curseforge.com/members/donne431/projects"><img title="CurseForge" src="img/links/curseforge.png" alt="CurseForge" width="5%" /></a>
