@@ -14,13 +14,105 @@ const translations = {
         wiki: '<i class="fa-solid fa-book"></i> Wiki',
         projects: '<i class="fa-solid fa-list-ul"></i> Projects',
         blog: '<i class="fa-solid fa-newspaper"></i> Blog',
-        dev_blog: 'Devblog',
+        devblog: 'Devblog',
         gallery: '<i class="fa-solid fa-camera"></i> Gallery',
         links: '<i class="fa-solid fa-share"></i> Links',
       },
       index: {
         about_me: 'About me',
-        bio: "Hi, my nickname is Donne431, I just a guy, who love made a modifications for games. I'm 16 years old, and I'm from Crimea (demi-island washed by the Black and Azov Sea), Russia. I also like to create almost any content for Minecraft, that is: mods, maps, resource packs, servers."
+        bio: "Hi, my nickname is Donne431, I just a guy, who love made a modifications for games. I'm 16 years old, and I'm from Crimea (demi-island washed by the Black and Azov Sea), Russia. I also like to create almost any content for Minecraft, that is: mods, maps, resource packs, servers.",
+        partners: 'Partners',
+        partners_info: 'With regard to the partnership, write to the Discord personal account (@Donne431).',
+        support: 'Support me by donating',
+        status: 'Status',
+        status_text: 'You can find out my nearest plans on page "<i class="fa-solid fa-road"></i> Roadmap"'
+      },
+      roadmap: {
+
+      },
+      wiki: {
+        index: {
+
+        },
+        iafd: {
+          index: {
+
+          },
+          drinks: {
+
+          },
+          foods: {
+
+          },
+          effects: {
+
+          },
+          items: {
+
+          },
+          tags: {
+
+          },
+          tools: {
+
+          }
+        }
+      },
+      projects: {
+        iafd: {
+          index: {
+
+          },
+          changelog: {
+
+          },
+          compatible_mods: {
+
+          },
+          download: {
+
+          },
+          incompatible_mods: {
+
+          },
+          spoilers: {
+
+          }
+        },
+        bamboo_spikes: {
+
+        },
+        create_curios_backtank: {
+
+        },
+        dcigse: {
+
+        },
+        dmd: {
+
+        },
+        forbidden_axe_3d: {
+
+        },
+        htiap: {
+
+        },
+        lrofc: {
+
+        },
+        potion_of_flying: {
+
+        }
+      },
+      blog: {
+
+      },
+      devblog: {
+        iafd: {
+          1: {
+
+          }
+        } 
       }
     },
   ru: {
@@ -38,13 +130,105 @@ const translations = {
         wiki: '<i class="fa-solid fa-book"></i> <strong>Вики</strong>',
         projects: '<i class="fa-solid fa-list-ul"></i> <strong>Проекты</strong>',
         blog: '<i class="fa-solid fa-newspaper"></i> <strong>Блог</strong>',
-        dev_blog: '<strong>Дневник разработки</strong>',
+        devblog: '<strong>Дневник разработки</strong>',
         gallery: '<i class="fa-solid fa-camera"></i> <strong>Галерея</strong>',
         links: '<i class="fa-solid fa-share"></i> <strong>Ссылки</strong>',
       },
       index: {
         about_me: 'Обо мне',
-        bio: 'Привет, мой никнейм - Donne431, я просто чел, который любит делать модификации для игр. Мне 16 лет, я с Крыма (полуостров, омываемый Чёрным и Азовским морем), Россия. Я также люблю создавать почти любой контент для Minecraft, к примеру: моды, карты, ресурспаки, сервера.'
+        bio: 'Привет, мой никнейм - Donne431, я просто чел, который любит делать модификации для игр. Мне 16 лет, я с Крыма (полуостров, омываемый Чёрным и Азовским морем), Россия. Я также люблю создавать почти любой контент для Minecraft, к примеру: моды, карты, ресурспаки, сервера.',
+        partners: 'Партнёры',
+        partners_info: 'Если у вас есть предложение сотрудничать, тогда напишите мне на мой персональный дискорд аккаунт (@Donne431).',
+        support: 'Поддержите меня донатом',
+        status: 'Статус',
+        status_text: 'Вы можете найти мои ближайшие планы на странице "<i class="fa-solid fa-road"></i> Дорожная карта"'
+      },
+      roadmap: {
+
+      },
+      wiki: {
+        index: {
+
+        },
+        iafd: {
+          index: {
+
+          },
+          drinks: {
+
+          },
+          foods: {
+
+          },
+          effects: {
+
+          },
+          items: {
+
+          },
+          tags: {
+
+          },
+          tools: {
+
+          }
+        }
+      },
+      projects: {
+        iafd: {
+          index: {
+
+          },
+          changelog: {
+
+          },
+          compatible_mods: {
+
+          },
+          download: {
+
+          },
+          incompatible_mods: {
+
+          },
+          spoilers: {
+
+          }
+        },
+        bamboo_spikes: {
+
+        },
+        create_curios_backtank: {
+
+        },
+        dcigse: {
+
+        },
+        dmd: {
+
+        },
+        forbidden_axe_3d: {
+
+        },
+        htiap: {
+
+        },
+        lrofc: {
+
+        },
+        potion_of_flying: {
+          
+        }
+      },
+      blog: {
+
+      },
+      devblog: {
+        iafd: {
+          1: {
+
+          }
+        } 
       }
     }
 };
