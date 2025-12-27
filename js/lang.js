@@ -9,6 +9,7 @@ const translations = {
           read: '<i class="fa-solid fa-book-open-reader"></i> Read',
           view_more: '<i class="fa-solid fa-hand-pointer"></i> View More',
           view_old_news: '<i class="fa-solid fa-hand-pointer"></i> View Old News',
+          back_to_home: '<i class="fa-solid fa-arrow-left"></i> Back to Home',
         },
         information: '<i class="fa-solid fa-circle-info"></i> Information',
         wiki: '<i class="fa-solid fa-book"></i> Wiki',
@@ -17,10 +18,11 @@ const translations = {
         devblog: 'Devblog',
         gallery: '<i class="fa-solid fa-camera"></i> Gallery',
         links: '<i class="fa-solid fa-share"></i> Links',
+        home: '<i class="fa-solid fa-house"></i> Home'
       },
       index: {
         about_me: 'About me',
-        bio: "Hi, my nickname is Donne431, I just a guy, who love made a modifications for games. I'm 16 years old, and I'm from Crimea (demi-island washed by the Black and Azov Sea), Russia. I also like to create almost any content for Minecraft, that is: mods, maps, resource packs, servers.",
+        bio: "Hi, my nickname is Donne431, I just a guy, who love made a modifications for games. I'm 17 years old, and I'm from Crimea (demi-island washed by the Black and Azov Sea), Russia. I also like to create almost any content for Minecraft, that is: mods, maps, resource packs, servers.",
         partners: 'Partners',
         partners_info: 'With regard to the partnership, write to the Discord personal account (@Donne431).',
         support: 'Support me by donating',
@@ -28,7 +30,33 @@ const translations = {
         status_text: 'You can find out my nearest plans on page "<i class="fa-solid fa-road"></i> Roadmap"'
       },
       roadmap: {
-
+        roadmap: '<i class="fa-solid fa-road"></i> Roadmap',
+        just_nothing: 'Just nothing...',
+        coming_soon: 'Coming soon...',
+        complementing: 'Complementing...',
+        2025: {
+          february: '<i class="fa-solid fa-calendar-days"></i> February 2025',
+          february_1: '',
+          february_2: '',
+          february_3: '',
+          february_4: '',
+          march: '<i class="fa-solid fa-calendar-days"></i> March 2025',
+          march_1: '',
+          march_2: '',
+          april: '<i class="fa-solid fa-calendar-days"></i> April 2025',
+          april_1: '',
+          april_2: '',
+          may: '<i class="fa-solid fa-calendar-days"></i> May 2025',
+          may_1: '',
+          may_2: '',
+          may_3: '',
+          june: '<i class="fa-solid fa-calendar-days"></i> June 2025',
+          july: '<i class="fa-solid fa-calendar-days"></i> July 2025',
+          july_1: '',
+          august: '<i class="fa-solid fa-calendar-days"></i> August 2025',
+          august_1: '',
+          august_2: '',
+        }
       },
       wiki: {
         index: {
@@ -125,6 +153,7 @@ const translations = {
           read: '<i class="fa-solid fa-book-open-reader"></i> <strong>Читать</strong>',
           view_more: '<i class="fa-solid fa-hand-pointer"></i> <strong>Посмотреть Больше</strong>',
           view_old_news: '<i class="fa-solid fa-hand-pointer"></i> <strong>Посмотреть Старые Новости</strong>',
+          back_to_home: '<i class="fa-solid fa-arrow-left"></i> <strong>Обратно на Главную страницу</strong>',
         },
         information: '<i class="fa-solid fa-circle-info"></i> <strong>Информация</strong>',
         wiki: '<i class="fa-solid fa-book"></i> <strong>Вики</strong>',
@@ -133,10 +162,11 @@ const translations = {
         devblog: '<strong>Дневник разработки</strong>',
         gallery: '<i class="fa-solid fa-camera"></i> <strong>Галерея</strong>',
         links: '<i class="fa-solid fa-share"></i> <strong>Ссылки</strong>',
+        home: '<i class="fa-solid fa-house"></i> <strong>Главная страница</strong>'
       },
       index: {
         about_me: 'Обо мне',
-        bio: 'Привет, мой никнейм - Donne431, я просто чел, который любит делать модификации для игр. Мне 16 лет, я с Крыма (полуостров, омываемый Чёрным и Азовским морем), Россия. Я также люблю создавать почти любой контент для Minecraft, к примеру: моды, карты, ресурспаки, сервера.',
+        bio: 'Привет, мой никнейм - Donne431, я просто чел, который любит делать модификации для игр. Мне 17 лет, я с Крыма (полуостров, омываемый Чёрным и Азовским морем), Россия. Я также люблю создавать почти любой контент для Minecraft, к примеру: моды, карты, ресурспаки, сервера.',
         partners: 'Партнёры',
         partners_info: 'Если у вас есть предложение сотрудничать, тогда напишите мне на мой персональный дискорд аккаунт (@Donne431).',
         support: 'Поддержите меня донатом',
@@ -144,7 +174,33 @@ const translations = {
         status_text: 'Вы можете найти мои ближайшие планы на странице "<i class="fa-solid fa-road"></i> Дорожная карта"'
       },
       roadmap: {
-
+        roadmap: '<i class="fa-solid fa-road"></i> <strong>Дорожная карта</strong>',
+        just_nothing: 'Просто ничего...',
+        coming_soon: 'Скоро...',
+        complementing: 'Дополняется...',
+        2025: {
+          february: '<i class="fa-solid fa-calendar-days"></i> Февраль 2025',
+          february_1: '',
+          february_2: '',
+          february_3: '',
+          february_4: '',
+          march: '<i class="fa-solid fa-calendar-days"></i> Март 2025',
+          march_1: '',
+          march_2: '',
+          april: '<i class="fa-solid fa-calendar-days"></i> Апрель 2025',
+          april_1: '',
+          april_2: '',
+          may: '<i class="fa-solid fa-calendar-days"></i> Май 2025',
+          may_1: '',
+          may_2: '',
+          may_3: '',
+          june: '<i class="fa-solid fa-calendar-days"></i> Июнь 2025',
+          july: '<i class="fa-solid fa-calendar-days"></i> Июль 2025',
+          july_1: '',
+          august: '<i class="fa-solid fa-calendar-days"></i> Август 2025',
+          august_1: '',
+          august_2: '',
+        }
       },
       wiki: {
         index: {

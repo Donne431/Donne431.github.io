@@ -144,9 +144,9 @@ const schematics = [
         ]
     },
     {
-        title: "Двигатель | Alpha",
+        title: "Двигатель | v.0.0.1 | Alpha",
         description: "Двигатель на 147к ен, требующий лаву извне",
-        detailedDescription: "Схематика двигателя, разработанного мной. Для запуска требует 2560ен. Требует лаву извне. Подключение нескольких двигателей происходит через вверх (через башню из коробок передач). Масштаб: 6х4х7 (ДхШхВ)",
+        detailedDescription: "Схематика двигателя, разработанного мной. Для запуска требует 2560ен. Требует лаву извне. Подключение нескольких двигателей происходит через вверх (через башню из коробок передач). Версия: 0.0.1. Масштаб: 6х4х7 (ДхШхВ)",
         tags: ["двигатель", "1.20.1", "0.5.1"],
         image: "/img/amythest/my_engine_alpha_0_0_2.nbt-1.png",
         images: [
@@ -254,7 +254,74 @@ const schematics = [
             { text: "Minecraft", icon: "/img/logo-icon/logo_minecraft.png", version: "1.20.1" },
             { text: "Create", icon: "/img/logo-icon/logo_create.png", version: "0.5.1j" }
         ]
+    },
+    {
+        title: "Банка Coca Cola",
+        description: "Банка Coca Cola, возможно использование - хранилище лавы",
+        detailedDescription: "Схематика банки Coca Cola. Внутри 13к свободного места. Можно использовать для хранилища лавы. Масштаб: 23x43x23 (ДхШхВ)",
+        tags: ["хранилище лавы"],
+        image: "/img/amythest/coca_cola_lava_tank.nbt.png",
+        images: [
+            "/img/amythest/coca_cola_lava_tank.nbt.png"
+        ],
+        downloads: [
+            { name: "coca_cola-lava_tank.nbt", description: "Схематика", url: "/files/amythest/coca_cola_lava_tank.nbt" }
+        ],
+        resources: [
+            { text: "Белый бетон x455", icon: "/img/minecraft/64x/белый-бетон.png" },
+            { text: "Железный блок х961", icon: "/img/minecraft/64x/железный-блок.png"},
+            { text: "Красный бетон х1931", icon: "/img/minecraft/64x/красный-бетон.png"}
+        ],
+        mods: [
+            { text: "Minecraft", icon: "/img/logo-icon/logo_minecraft.png", version: "1.20.1" },
+            { text: "Create", icon: "/img/logo-icon/logo_create.png", version: "" }
+        ]
+    },
+    {
+        title: "Карьер | v.0.0.1 | Alpha",
+        description: "Карьер, стандартный",
+        detailedDescription: "Схематика карьера. Версия: 0.0.1 Масштаб: НЕ ИЗМЕРЯЛ (ДхШхВ)",
+        tags: ["карьер", "1.20.1", "0.5.1"],
+        image: "/img/amythest/quarry_v_0_0_1-marked.png",
+        images: [
+            "/img/amythest/quarry_v_0_0_1-marked.png",
+            "/img/amythest/quarry_v_0_0_1_controller-marked.png"
+        ],
+        downloads: [
+            { name: "quarry_v_0_0_1-main_part.nbt", description: "Схематика", url: "/files/amythest/quarry_v_0_0_1_main_part.nbt" },
+            { name: "quarry_v_0_0_1-main_part-without_external_storage.nbt", description: "Схематика", url: "/files/amythest/quarry_v_0_0_1_main_part-without_external_storage.nbt" },
+            { name: "quarry_v_0_0_1-controller.nbt", description: "Схематика", url: "/files/amythest/quarry_v_0_0_1_controller.nbt" }
+        ],
+        resources: [
+            { text: "Временно отсуствует", icon: "/img/icon-lb/close.png.png" }
+        ],
+        mods: [
+            { text: "Minecraft", icon: "/img/logo-icon/logo_minecraft.png", version: "1.20.1" },
+            { text: "Create", icon: "/img/logo-icon/logo_create.png", version: "0.5.1j" }
+        ]
+    } /*,
+    {
+        title: "Пример | Название",
+        description: "Пример | Краткое описание",
+        detailedDescription: "Пример | Подробное описание",
+        tags: ["пример"],
+        image: "/img/amythest/example-1.png",
+        images: [
+            "/img/amythest/example-1.png",
+            "/img/amythest/example-2.png"
+        ],
+        downloads: [
+            { name: "example.nbt", description: "Схематика", url: "/files/amythest/example.nbt" }
+        ],
+        resources: [
+            { text: "Пример x0", icon: "/img/minecraft/64x/пример.png" }
+        ],
+        mods: [
+            { text: "Minecraft", icon: "/img/logo-icon/logo_minecraft.png", version: "1.20.1" },
+            { text: "Create", icon: "/img/logo-icon/logo_create.png", version: "0.5.1j" }
+        ]
     }
+        */
 ];
 
 let selectedTags = [];
@@ -338,7 +405,7 @@ document.getElementById('tag-search').addEventListener('input', (e) => {
 });
 
 // Добавление новой схемы
-function addSchematic() {
+/* function addSchematic() {
     const title = document.getElementById('new-title').value.trim();
     const description = document.getElementById('new-description').value.trim();
     const detailedDescription = document.getElementById('new-detailed-description').value.trim();
@@ -380,6 +447,7 @@ function addSchematic() {
         filterSchematics();
     }
 }
+    */
 
 // Инициализация
 document.addEventListener('DOMContentLoaded', () => {
