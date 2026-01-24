@@ -39,7 +39,7 @@ const translations = {
           february: '<i class="fa-solid fa-calendar-days"></i> February 2025',
           february_1: 'Launching a website: launching this website',
           february_2: 'Update addons for Create: just updated logo',
-          february_3: 'Update Ice and Fire Delight - 0.2.2: New configs, bugfixes and new advancements',
+          february_3: 'Update <img src="../img/projects/ice_and_fire_delight/logo_cutted.png" class="icon-x1_5"> Ice and Fire Delight - 0.2.2: New configs, bugfixes and new advancements',
           february_4_1: '<s>Release new mod: Create: Lights up</s>',
           february_4_2: 'So far, development has been frozen',
           march: '<i class="fa-solid fa-calendar-days"></i> March 2025',
@@ -47,7 +47,7 @@ const translations = {
           march_2: 'Create wiki for IaFD: just mini wiki for the mod',
           april: '<i class="fa-solid fa-calendar-days"></i> April 2025',
           april_1: 'Release new mod: Just FPS',
-          april_2: 'Update Ice and Fire Delight - 0.2.3 (Major update): New items, advancements, bugfixes, remaked textures and more.',
+          april_2: 'Update <img src="../img/projects/ice_and_fire_delight/logo_cutted.png" class="icon-x1_5"> Ice and Fire Delight - 0.2.3 (Major update): New items, advancements, bugfixes, remaked textures and more.',
           may: '<i class="fa-solid fa-calendar-days"></i> May 2025',
           may_1: 'Release new mod: Death Coordinate',
           may_2: 'Release new resourcepack: AE2 Guide - Russian Localization',
@@ -55,17 +55,22 @@ const translations = {
           may_3_2: 'So far, development has been frozen',
           june: '<i class="fa-solid fa-calendar-days"></i> June 2025',
           july: '<i class="fa-solid fa-calendar-days"></i> July 2025',
-          july_1: 'Update for the Ice and Fire Delight wiki',
+          july_1: 'Update for the <img src="../img/projects/ice_and_fire_delight/logo_cutted.png" class="icon-x1_5"> Ice and Fire Delight wiki',
           august: '<i class="fa-solid fa-calendar-days"></i> August 2025',
           august_1: 'Update for the website (Translation system + minor changes)',
-          august_2: 'Update Ice and Fire Delight - 0.2.4: New item, bugfixes and minor changes.',
+          august_2: 'Update <img src="../img/projects/ice_and_fire_delight/logo_cutted.png" class="icon-x1_5"> Ice and Fire Delight - 0.2.4: New item, bugfixes and minor changes.',
           september: '<i class="fa-solid fa-calendar-days"></i> September 2025',
           october: '<i class="fa-solid fa-calendar-days"></i> October 2025',
           november: '<i class="fa-solid fa-calendar-days"></i> November 2025',
           december: '<i class="fa-solid fa-calendar-days"></i> December 2025'
         },
         2026: {
-          january: '<i class="fa-solid fa-calendar-days"></i> January 2026'
+          january: '<i class="fa-solid fa-calendar-days"></i> January 2026',
+          january_1: 'Update <img src="../img/projects/national_anthems/logo.png" class="icon-x1_5"> National anthems - 1.5.5',
+          january_2: 'Update <img src="../img/projects/classic_musical_discs/logo.png" class="icon-x1_5"> Classic musical discs - 1.5.1',
+          january_3: 'Update <img src="../img/projects/national_anthems/logo.png" class="icon-x1_5"> National anthems - 1.5.6',
+          january_4: 'Update <img src="../img/projects/classic_musical_discs/logo.png" class="icon-x1_5"> Classic musical discs - 1.5.2',
+          february: '<i class="fa-solid fa-calendar-days"></i> February 2026'
         }
       },
       wiki: {
@@ -193,7 +198,7 @@ const translations = {
           february: '<i class="fa-solid fa-calendar-days"></i> Февраль 2025',
           february_1: 'Запуск веб сайта: запуск этого веб сайта',
           february_2: 'Обновление аддонов для Create: просто обновлённые лого',
-          february_3: 'Обновление Ice and Fire Delight - 0.2.2: Новые конфиги, достижения и исправление багов',
+          february_3: 'Обновление <img src="../img/projects/ice_and_fire_delight/logo_cutted.png" class="icon-x1_5"> Ice and Fire Delight - 0.2.2: Новые конфиги, достижения и исправление багов',
           february_4_1: '<s>Релиз нового мода: Create: Lights up</s>',
           february_4_2: 'Разработка мода была заморожена',
           march: '<i class="fa-solid fa-calendar-days"></i> Март 2025',
@@ -201,7 +206,7 @@ const translations = {
           march_2: 'Cоздать вики для IaFD: простое мини вики для мода',
           april: '<i class="fa-solid fa-calendar-days"></i> Апрель 2025',
           april_1: 'Релиз нового мода: Just FPS',
-          april_2: 'Обновление Ice and Fire Delight - 0.2.3 (Крупное обновление): Новые предметы, достижения, исправление багов, переделанные текстуры и многое другое</a>',
+          april_2: 'Обновление <img src="../img/projects/ice_and_fire_delight/logo_cutted.png" class="icon-x1_5"> Ice and Fire Delight - 0.2.3 (Крупное обновление): Новые предметы, достижения, исправление багов, переделанные текстуры и многое другое</a>',
           may: '<i class="fa-solid fa-calendar-days"></i> Май 2025',
           may_1: 'Релиз нового мода: Death Coordinate',
           may_2: 'Релиз нового ресурспака: AE2 Guide - Russian Localization',
@@ -209,17 +214,22 @@ const translations = {
           may_3_2: 'Разработка датапака была заморожена',
           june: '<i class="fa-solid fa-calendar-days"></i> Июнь 2025',
           july: '<i class="fa-solid fa-calendar-days"></i> Июль 2025',
-          july_1: 'Обновление вики Ice and Fire Delight',
+          july_1: 'Обновление вики <img src="../img/projects/ice_and_fire_delight/logo_cutted.png" class="icon-x1_5"> Ice and Fire Delight',
           august: '<i class="fa-solid fa-calendar-days"></i> Август 2025',
           august_1: 'Обновление сайта (Система перевода + мелкие изменения)',
-          august_2: 'Обновление Ice and Fire Delight - 0.2.4: Новый предмет, исправление багов и мелкие изменения.',
+          august_2: 'Обновление <img src="../img/projects/ice_and_fire_delight/logo_cutted.png" class="icon-x1_5"> Ice and Fire Delight - 0.2.4: Новый предмет, исправление багов и мелкие изменения.',
           september: '<i class="fa-solid fa-calendar-days"></i> Сентябрь 2025',
           october: '<i class="fa-solid fa-calendar-days"></i> Октябрь 2025',
           november: '<i class="fa-solid fa-calendar-days"></i> Ноябрь 2025',
           december: '<i class="fa-solid fa-calendar-days"></i> Декабрь 2025'
         },
         2026: {
-          january: '<i class="fa-solid fa-calendar-days"></i> Январь 2026'
+          january: '<i class="fa-solid fa-calendar-days"></i> Январь 2026',
+          january_1: 'Обновление <img src="../img/projects/national_anthems/logo.png" class="icon-x1_5"> National anthems - 1.5.5',
+          january_2: 'Обновление <img src="../img/projects/classic_musical_discs/logo.png" class="icon-x1_5"> Classic musical discs - 1.5.1',
+          january_3: 'Обновление <img src="../img/projects/national_anthems/logo.png" class="icon-x1_5"> National anthems - 1.5.6',
+          january_4: 'Обновление <img src="../img/projects/classic_musical_discs/logo.png" class="icon-x1_5"> Classic musical discs - 1.5.2',
+          february: '<i class="fa-solid fa-calendar-days"></i> Февраль 2026'
         }
       },
       wiki: {

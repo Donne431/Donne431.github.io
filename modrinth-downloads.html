@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<!-- I quickly generated this page in Grok for my pages, so sorry about that. -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статистика скачиваний на Modrinth — Donne431</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            margin: 50px; 
+            background: #f8f9fa; 
+        }
+        h1 { color: #2c3e50; }
+        .controls {
+            margin: 20px 0;
+            font-size: 1.1em;
+        }
+        .controls button {
+            padding: 8px 16px;
+            margin: 0 8px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: #fff;
+        }
+        .controls button.active {
+            background: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+        .stats { 
+            font-size: 1.3em; 
+            margin: 30px auto; 
+            max-width: 700px; 
+            line-height: 1.6; 
+        }
+        .project { 
+            margin: 12px 0; 
+            padding: 12px; 
+            background: white;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+        }
+        .project-name { font-weight: bold; }
+        .project-downloads { color: #007bff; font-weight: bold; }
+        .total { 
+            font-weight: bold; 
+            color: #007bff; 
+            font-size: 1.8em; 
+            margin-top: 40px; 
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .loading { color: #95a5a6; }
+    </style>
+</head>
+<body>
+    <h1>Статистика скачиваний проектов Donne431 на Modrinth</h1>
+
+    <div class="controls">
+        Сортировать по: 
+        <button id="sort-downloads" class="active">Скачиваниям ↓</button>
+        <button id="sort-date">Дате создания ↓</button>
+    </div>
+
+    <div class="stats" id="projects-list">
+        <p class="loading">Загрузка проектов...</p>
+    </div>
+
+    <div class="total" id="total-wrapper" style="display:none;">
+        Общее количество скачиваний: <span id="total-downloads-big"></span>
+    </div>
+
+    <script>
+        // ──────────────────────────────────────────────
+        const USERNAME = 'Donne431';
+        // ──────────────────────────────────────────────
+
+        let allProjects = []; // массив для хранения проектов
+        let currentSort = 'downloads'; // по умолчанию
+
+        async function loadProjects() {
+            try {
+                const userRes = await fetch(`https://api.modrinth.com/v2/user/${USERNAME}`);
+                if (!userRes.ok) throw new Error('Не удалось загрузить профиль пользователя');
+                const user = await userRes.json();
+
+                const projectsRes = await fetch(`https://api.modrinth.com/v2/user/${user.id}/projects?type=mod`);
+                if (!projectsRes.ok) throw new Error('Не удалось загрузить проекты');
+                allProjects = await projectsRes.json();
+
+                renderProjects();
+                document.getElementById('total-wrapper').style.display = 'block';
+
+            } catch (err) {
+                document.getElementById('projects-list').innerHTML = `<p style="color:red;">Ошибка: ${err.message}</p>`;
+                console.error(err);
+            }
+        }
+
+        function renderProjects() {
+            let projects = [...allProjects]; // копия массива
+
+            if (currentSort === 'downloads') {
+                projects.sort((a, b) => b.downloads - a.downloads);
+            } else if (currentSort === 'date') {
+                projects.sort((a, b) => new Date(a.published) - new Date(b.published));
+            }
+
+            const container = document.getElementById('projects-list');
+            container.innerHTML = '';
+
+            let total = 0;
+
+            projects.forEach(project => {
+                const downloads = project.downloads || 0;
+                total += downloads;
+
+                const div = document.createElement('div');
+                div.className = 'project';
+                div.innerHTML = `
+                    <span class="project-name">${project.title}</span>
+                    <span class="project-downloads">${downloads.toLocaleString('ru-RU')}</span>
+                `;
+                container.appendChild(div);
+            });
+
+            document.getElementById('total-downloads-big').textContent = total.toLocaleString('ru-RU');
+        }
+
+        // Обработчики кнопок сортировки
+        document.getElementById('sort-downloads').addEventListener('click', () => {
+            currentSort = 'downloads';
+            document.getElementById('sort-downloads').classList.add('active');
+            document.getElementById('sort-date').classList.remove('active');
+            renderProjects();
+        });
+
+        document.getElementById('sort-date').addEventListener('click', () => {
+            currentSort = 'date';
+            document.getElementById('sort-date').classList.add('active');
+            document.getElementById('sort-downloads').classList.remove('active');
+            renderProjects();
+        });
+
+        // Запуск при загрузке страницы
+        window.addEventListener('load', loadProjects);
+    </script>
+</body>
+</html>

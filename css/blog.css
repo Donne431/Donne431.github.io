@@ -2,24 +2,28 @@
   height: 1em;
   width: auto;
   vertical-align: middle;
+  border-radius: 0 !important;
 }
 
 .icon-x1_5 {
   height: 1.5em;
   width: auto;
   vertical-align: middle;
+  border-radius: 0 !important;
 }
 
 .icon-x2 {
   height: 2em;
   width: auto;
   vertical-align: middle;
+  border-radius: 0 !important;
 }
 
 .image-x2_5 {
   height: 2.5em;
   width: auto;
   vertical-align: middle;
+  border-radius: 0 !important;
 }
 
 .image-x5 {
@@ -33,4 +37,5 @@
   height: 10em;
   width: auto;
   vertical-align: middle;
+  border-radius: 0 !important;
 }
