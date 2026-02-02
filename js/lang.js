@@ -68,9 +68,8 @@ const translations = {
           january: '<i class="fa-solid fa-calendar-days"></i> January 2026',
           january_1: 'Update <img src="../img/projects/national_anthems/logo.png" class="icon-x1_5"> National anthems - 1.5.5',
           january_2: 'Update <img src="../img/projects/classic_musical_discs/logo.png" class="icon-x1_5"> Classic musical discs - 1.5.1',
-          january_3: 'Update <img src="../img/projects/national_anthems/logo.png" class="icon-x1_5"> National anthems - 1.5.6',
-          january_4: 'Update <img src="../img/projects/classic_musical_discs/logo.png" class="icon-x1_5"> Classic musical discs - 1.5.2',
-          february: '<i class="fa-solid fa-calendar-days"></i> February 2026'
+          february: '<i class="fa-solid fa-calendar-days"></i> February 2026',
+          february_1: 'Update <img src="../img/projects/classic_musical_discs/logo.png" class="icon-x1_5"> Classic musical discs - 1.5.2'
         }
       },
       wiki: {
@@ -227,9 +226,8 @@ const translations = {
           january: '<i class="fa-solid fa-calendar-days"></i> Январь 2026',
           january_1: 'Обновление <img src="../img/projects/national_anthems/logo.png" class="icon-x1_5"> National anthems - 1.5.5',
           january_2: 'Обновление <img src="../img/projects/classic_musical_discs/logo.png" class="icon-x1_5"> Classic musical discs - 1.5.1',
-          january_3: 'Обновление <img src="../img/projects/national_anthems/logo.png" class="icon-x1_5"> National anthems - 1.5.6',
-          january_4: 'Обновление <img src="../img/projects/classic_musical_discs/logo.png" class="icon-x1_5"> Classic musical discs - 1.5.2',
-          february: '<i class="fa-solid fa-calendar-days"></i> Февраль 2026'
+          february: '<i class="fa-solid fa-calendar-days"></i> Февраль 2026',
+          february_1: 'Обновление <img src="../img/projects/classic_musical_discs/logo.png" class="icon-x1_5"> Classic musical discs - 1.5.2'
         }
       },
       wiki: {
