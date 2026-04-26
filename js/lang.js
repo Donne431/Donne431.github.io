@@ -23,7 +23,7 @@ const translations = {
       },
       index: {
         about_me: 'About me',
-        bio: "Hi, my nickname is Donne431, I just a guy, who love made a modifications for games. I'm 17 years old, and I'm from Crimea (demi-island washed by the Black and Azov Sea), Russia. I also like to create almost any content for Minecraft, that is: mods, maps, resource packs, servers.",
+        bio: "Hi, my nickname is Donne431, I just a guy, who love made a modifications for games. I'm 17 years old, and I'm from Crimea (demi-island washed by the Black and Azov Sea), Russia. I also like to create almost any content for Minecraft, that is: mods, resource packs, datapacks.",
         partners: 'Partners',
         partners_info: 'With regard to the partnership, write to the Discord personal account (@Donne431).',
         support: 'Support me by donating',
@@ -69,7 +69,10 @@ const translations = {
           january_1: 'Update <img src="../img/projects/national_anthems/logo.png" class="icon-x1_5"> National anthems - 1.5.5',
           january_2: 'Update <img src="../img/projects/classic_musical_discs/logo.png" class="icon-x1_5"> Classic musical discs - 1.5.1',
           february: '<i class="fa-solid fa-calendar-days"></i> February 2026',
-          february_1: 'Update <img src="../img/projects/classic_musical_discs/logo.png" class="icon-x1_5"> Classic musical discs - 1.5.2'
+          february_1: 'Update <img src="../img/projects/classic_musical_discs/logo.png" class="icon-x1_5"> Classic musical discs - 1.5.2',
+          march: '<i class="fa-solid fa-calendar-days"></i> March 2026',
+          april: '<i class="fa-solid fa-calendar-days"></i> April 2026',
+          may: '<i class="fa-solid fa-calendar-days"></i> May 2026'
         }
       },
       wiki: {
@@ -181,7 +184,7 @@ const translations = {
       },
       index: {
         about_me: 'Обо мне',
-        bio: 'Привет, мой никнейм - Donne431, я просто чел, который любит делать модификации для игр. Мне 17 лет, я с Крыма (полуостров, омываемый Чёрным и Азовским морем), Россия. Я также люблю создавать почти любой контент для Minecraft, к примеру: моды, карты, ресурспаки, сервера.',
+        bio: 'Привет, мой никнейм - Donne431, я просто чел, который любит делать модификации для игр. Мне 17 лет, я с Крыма (полуостров, омываемый Чёрным и Азовским морем), Россия. Я также люблю создавать почти любой контент для Minecraft, к примеру: моды, ресурспаки, датапаки.',
         partners: 'Партнёры',
         partners_info: 'Если у вас есть предложение сотрудничать, тогда напишите мне на мой персональный дискорд аккаунт (@Donne431).',
         support: 'Поддержите меня донатом',
@@ -227,7 +230,10 @@ const translations = {
           january_1: 'Обновление <img src="../img/projects/national_anthems/logo.png" class="icon-x1_5"> National anthems - 1.5.5',
           january_2: 'Обновление <img src="../img/projects/classic_musical_discs/logo.png" class="icon-x1_5"> Classic musical discs - 1.5.1',
           february: '<i class="fa-solid fa-calendar-days"></i> Февраль 2026',
-          february_1: 'Обновление <img src="../img/projects/classic_musical_discs/logo.png" class="icon-x1_5"> Classic musical discs - 1.5.2'
+          february_1: 'Обновление <img src="../img/projects/classic_musical_discs/logo.png" class="icon-x1_5"> Classic musical discs - 1.5.2',
+          march: '<i class="fa-solid fa-calendar-days"></i> Март 2026',
+          april: '<i class="fa-solid fa-calendar-days"></i> Апрель 2026',
+          may: '<i class="fa-solid fa-calendar-days"></i> Май 2026'
         }
       },
       wiki: {
