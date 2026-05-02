@@ -35,6 +35,8 @@ const translations = {
         just_nothing: 'Just nothing...',
         coming_soon: 'Coming soon...',
         complementing: 'Complementing...',
+        future: 'Future',
+        future_1: 'Because of my extreme laziness, my rare bursts of motivation to do something, and my uncertainty about the future, I’ve decided to add a placeholder to the roadmap for now, so as not to raise false hopes where there likely aren’t any',
         2025: {
           february: '<i class="fa-solid fa-calendar-days"></i> February 2025',
           february_1: 'Launching a website: launching this website',
@@ -196,6 +198,8 @@ const translations = {
         just_nothing: 'Пустота...',
         coming_soon: 'Скоро...',
         complementing: 'Дополняется...',
+        future: 'Будущее',
+        future: 'Из-за моей великой лени, редких резких порывов что-то сделать и не уверенности насчёт будущего, я решил пока сделать такую заглушку на дорожную карту, чтобы не создавать надежду там, где её вероятно нет',
         2025: {
           february: '<i class="fa-solid fa-calendar-days"></i> Февраль 2025',
           february_1: 'Запуск веб сайта: запуск этого веб сайта',
