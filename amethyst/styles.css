@@ -116,7 +116,7 @@ header .header-subtitle {
 
 .tag {
     padding: 10px 25px;
-    background-color: var(--button-color);
+    background-color: var(--light-color);
     color: var(--button-text-color);
     border-radius: 1em;
     cursor: pointer;
@@ -522,6 +522,27 @@ header .header-subtitle {
     color: var(--button-hover-text-color);
 }
 
+/* Категории тегов */
+.tag-category {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.tag-category h4 {
+    color: var(--info-color);
+    margin-bottom: 8px;
+    font-size: 1.1em;
+    border-bottom: 1px solid rgba(75, 180, 241, 0.3);
+    padding-bottom: 4px;
+}
+
+.tag-list-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
 /* Адаптивность */
 @media (max-width: 1200px) {
     .filter-section {
@@ -544,6 +565,14 @@ header .header-subtitle {
     .lightbox img {
         max-width: 95vw;
         max-height: 95vh;
+    }
+
+    .tag-category {
+        margin-bottom: 22px;
+    }
+        
+    .tag-category h4 {
+        font-size: 1em;
     }
 }
 

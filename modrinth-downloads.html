@@ -12,10 +12,13 @@
             margin: 50px; 
             background: #f8f9fa; 
         }
-        h1 { color: #2c3e50; }
+        h1 { color: #6f9cc9; }
         .controls {
             margin: 20px 0;
             font-size: 1.1em;
+        }
+        .controls-text {
+            color: #dee3ed;
         }
         .controls button {
             padding: 8px 16px;
@@ -23,12 +26,12 @@
             cursor: pointer;
             border: 1px solid #ccc;
             border-radius: 4px;
-            background: #fff;
+            background: #dee3ed;
         }
         .controls button.active {
-            background: #007bff;
+            background: #6f9cc9;
             color: white;
-            border-color: #007bff;
+            border-color: #6f9cc9;
         }
         .stats { 
             font-size: 1.3em; 
@@ -39,7 +42,7 @@
         .project { 
             margin: 12px 0; 
             padding: 12px; 
-            background: white;
+            background: #dee3ed;
             border-radius: 6px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             text-align: left;
@@ -47,25 +50,31 @@
             justify-content: space-between;
         }
         .project-name { font-weight: bold; }
-        .project-downloads { color: #007bff; font-weight: bold; }
+        .project-downloads { color: #245485; font-weight: bold; }
         .total { 
             font-weight: bold; 
-            color: #007bff; 
+            color: #245485; 
             font-size: 1.8em; 
             margin-top: 40px; 
             padding: 15px;
-            background: white;
+            background: #dee3ed;
             border-radius: 8px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
+        .total-text {
+            color: black;
+        }
         .loading { color: #95a5a6; }
     </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="config.css">
+    <script src="js/lang.js"></script>
 </head>
 <body>
     <h1>Статистика скачиваний проектов Donne431 на Modrinth</h1>
 
     <div class="controls">
-        Сортировать по: 
+        <a class="controls-text">Сортировать по:</a> 
         <button id="sort-downloads" class="active">Скачиваниям ↓</button>
         <button id="sort-date">Дате создания ↓</button>
     </div>
@@ -75,7 +84,7 @@
     </div>
 
     <div class="total" id="total-wrapper" style="display:none;">
-        Общее количество скачиваний: <span id="total-downloads-big"></span>
+        <a class="total-text">Общее количество скачиваний:</a> <span id="total-downloads-big"></span>
     </div>
 
     <script>
@@ -153,5 +162,11 @@
         // Запуск при загрузке страницы
         window.addEventListener('load', loadProjects);
     </script>
+    <br>
+    <section class="dark">
+    <div class="news-card" align="right">
+    <a href="./" class="btn2" data-translate-key="universal.button.back_to_home"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+    </div>
+    </section>
 </body>
 </html>
