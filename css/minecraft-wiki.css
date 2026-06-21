@@ -1,0 +1,88 @@
+/* Minecraft-style crafting grid */
+.crafting-grid {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 60px);
+    gap: 4px;
+    background: #8B4513;
+    padding: 12px;
+    border: 4px solid #C0C0C0;
+    border-image: linear-gradient(#fff, #aaa) 1;
+    position: relative;
+    margin: 15px 0;
+}
+
+.crafting-slot {
+    width: 60px;
+    height: 60px;
+    background: #C6C6C6;
+    border: 2px solid #555;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.crafting-slot img {
+    width: 48px;
+    height: 48px;
+    image-rendering: pixelated; /* MC стиль */
+}
+
+.crafting-output {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+    background: #C6C6C6;
+    border: 2px solid #FFD700; /* золотая рамка */
+}
+
+/* Tooltip в стиле MC */
+.mc-tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 4px 8px;
+    border: 2px solid #555;
+    font-family: 'Minecraft', monospace; /* загрузи шрифт ниже */
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.1s;
+    box-shadow: 3px 3px 0 #000;
+}
+
+@font-face {
+    font-family: 'Minecraft';
+    src: url('./minecraft.ttf') format('truetype');
+}
+
+.mc-item:hover .mc-tooltip {
+    opacity: 1;
+}
+
+/* Hunger & Saturation */
+.hunger-bar {
+    display: flex;
+    gap: 2px;
+}
+.hunger-icon {
+    width: 20px;
+    height: 20px;
+    background: url('../../img/minecraft/hunger.png') no-repeat;
+    image-rendering: pixelated;
+}
+.saturation-icon {
+    background: url('../../img/minecraft/saturation.png') no-repeat; /* сделай overlay или отдельные спрайты */
+}
+
+/* Эффекты */
+.effect {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #2F2F2F;
+    padding: 4px 12px;
+    border: 1px solid #555;
+    margin: 4px;
+}

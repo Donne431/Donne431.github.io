@@ -1,0 +1,33 @@
+{
+  "fire_sausage": {
+    "name": "Огненная сосиска",
+    "image": "items/fire_sausage.png",
+    "type": "food",
+    "hunger": 8,
+    "saturation": 12.8,
+    "effects": [
+      {
+        "id": "fire_resistance",
+        "name": "Огнестойкость",
+        "duration": "0:30",
+        "icon": "effects/fire_resistance.png",
+        "level": 1
+      }
+    ],
+    "recipe": {
+      "type": "shaped",
+      "pattern": [
+        " S ",
+        "MFM",
+        " S "
+      ],
+      "key": {
+        "S": { "item": "minecraft:stick", "name": "Палка" },
+        "M": { "item": "mod:fire_meat", "name": "Мясо огненного дракона", "image": "items/fire_meat.png" },
+        "F": { "item": "mod:fire_sausage_casing", "name": "Оболочка", "image": "items/sausage_casing.png" }
+      },
+      "result": { "item": "mod:fire_sausage", "count": 4 }
+    },
+    "description": "Восхитительная сосиска, которая даёт силу дракона..."
+  }
+}
