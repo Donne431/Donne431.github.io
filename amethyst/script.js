@@ -180,7 +180,7 @@ const schematics = [
         title: "Купольная база",
         description: "База из колотого глубинного сланца с куплом из стекла",
         detailedDescription: "Схематика базы из колотого глубинного сланца с куполом из стекла. Масштаб: ~ 8х8 чанков",
-        tags: ["база", "1.20.1", "0.5.1"],
+        tags: ["база"],
         image: "/img/amethyst/dome_base-1.png",
         images: [
             "/img/amethyst/dome_base-1.png",
@@ -293,13 +293,98 @@ const schematics = [
             { name: "quarry_v_0_0_1-controller.nbt", description: "Схематика", url: "/files/amethyst/quarry_v_0_0_1_controller.nbt" }
         ],
         resources: [
-            { text: "Временно отсуствует", icon: "/img/icon-lb/close.png.png" }
+            { text: "Временно отсуствует", icon: "/img/icon-lb/close.png" }
         ],
         mods: [
             { text: "Minecraft", icon: "/img/logo-icon/logo_minecraft.png", version: "1.20.1" },
             { text: "Create", icon: "/img/logo-icon/logo_create.png", version: "0.5.1j" }
         ]
-    } /*,
+    },
+    {
+        title: "Дирижабль 'Дельта' | v.1.0.2",
+        description: "Дирижабль, маленький, гражданский",
+        detailedDescription: "Схематика гражданского дирижабля 'Дельта'. Версия: 1.0.2. Масштаб: 9x9x10 (ДхШхВ). Скорость: до 3 м/c. Максимальная высота: ~220",
+        tags: ["техника", "дирижабль", "гражданский", "1.21.1", "6.0+"],
+        image: "/img/amethyst/airship_delta_1_0_2.nbt-1.png",
+        images: [
+            "/img/amethyst/airship_delta_1_0_2.nbt-1.png"
+        ],
+        downloads: [
+            { name: "airship_delta_1_0.nbt", description: "Схематика v.1.0", url: "/files/amethyst/airship_delta_1_0.nbt" },
+            { name: "airship_delta_1_0_1.nbt", description: "Схематика v.1.0.1", url: "/files/amethyst/airship_delta_1_0_1.nbt" },
+            { name: "airship_delta_1_0_2.nbt", description: "Схематика v.1.0.2", url: "/files/amethyst/airship_delta_1_0_2.nbt" }
+        ],
+        resources: [
+            { text: "Временно отсуствует", icon: "/img/icon-lb/close.png" }
+        ],
+        mods: [
+            { text: "Minecraft", icon: "/img/logo-icon/logo_minecraft.png", version: "1.21.1" },
+            { text: "Create", icon: "/img/logo-icon/logo_create.png", version: "6.0+" },
+            { text: "Create Aeronautics", icon: "/img/logo-icon/logo_create_aeronautics.png", version: "1.2+" }
+        ]
+    },
+    {
+        title: "Автосборка корпусов 6.0+",
+        description: "Автосборка андезитов/латунных/медных корпусов",
+        detailedDescription: "Схематика механизма автосборки корпусов, для которых требуется 1 вид материала + обтёсанное бревно. Масштаб: 4х2х4 (ДхШхВ)",
+        tags: ["автосборка", "корпуса", "1.21.1", "6.0+"],
+        image: "/img/amethyst/andesite_brass_copper_casing_maker_6_0.nbt-1.png",
+        images: [
+            "/img/amethyst/andesite_brass_copper_casing_maker_6_0.nbt-1.png"
+        ],
+        downloads: [
+            { name: "andesite_brass_copper_casing_maker_6_0.nbt", description: "Схематика", url: "/files/amethyst/andesite_brass_copper_casing_maker_6_0.nbt" }
+        ],
+        resources: [
+            { text: "Временно отсуствует", icon: "/img/icon-lb/close.png" }
+        ],
+        mods: [
+            { text: "Minecraft", icon: "/img/logo-icon/logo_minecraft.png", version: "1.21.1" },
+            { text: "Create", icon: "/img/logo-icon/logo_create.png", version: "6.0+" }
+        ]
+    },
+    {
+        title: "Автосборка двигательных узлов",
+        description: "Автосборка двигательных узлов из Create Aeronautics",
+        detailedDescription: "Схематика механизма автосборки двигательных узлов из Create Aeronautics, необходимых для создания портативного генератора. Масштаб: 5х2х3 (ДхШхВ)",
+        tags: ["автосборка", "двигательный узел", "1.21.1", "6.0+"],
+        image: "/img/amethyst/engine_assembly_maker.nbt-1.png",
+        images: [
+            "/img/amethyst/engine_assembly_maker.nbt-1.png"
+        ],
+        downloads: [
+            { name: "engine_assembly_maker.nbt", description: "Схематика", url: "/files/amethyst/engine_assembly_maker.nbt" }
+        ],
+        resources: [
+            { text: "Временно отсуствует", icon: "/img/icon-lb/close.png" }
+        ],
+        mods: [
+            { text: "Minecraft", icon: "/img/logo-icon/logo_minecraft.png", version: "1.21.1" },
+            { text: "Create", icon: "/img/logo-icon/logo_create.png", version: "6.0+" },
+            { text: "Create Aeronautics", icon: "/img/logo-icon/logo_create_aeronautics.png", version: "1.2+" }
+        ]
+    },
+    {
+        title: "Автосборка механизмов точности",
+        description: "Автосборка механизмов точности из Create",
+        detailedDescription: "Схематика механизма автосборки механизмов точности из Create. Масштаб: 6х2х4 (ДхШхВ)",
+        tags: ["автосборка", "механизм точности", "1.21.1", "6.0+"],
+        image: "/img/amethyst/precision_mechanism_maker_6_0.nbt-1.png",
+        images: [
+            "/img/amethyst/precision_mechanism_maker_6_0.nbt-1.png"
+        ],
+        downloads: [
+            { name: "precision_mechanism_maker_6_0.nbt", description: "Схематика", url: "/files/amethyst/precision_mechanism_maker_6_0.nbt" }
+        ],
+        resources: [
+            { text: "Временно отсуствует", icon: "/img/icon-lb/close.png" }
+        ],
+        mods: [
+            { text: "Minecraft", icon: "/img/logo-icon/logo_minecraft.png", version: "1.21.1" },
+            { text: "Create", icon: "/img/logo-icon/logo_create.png", version: "6.0+" }
+        ]
+    } 
+    /*,
     {
         title: "Пример | Название",
         description: "Пример | Краткое описание",
@@ -327,8 +412,10 @@ const schematics = [
 const tagCategories = {
     "Версия игры": ["1.20.1", "1.21.1"],
     "Версия Create": ["0.5.1", "6.0+"],
-    "Тип": ["автосборка", "ферма", "двигатель", "база", "хранилище лавы", "карьер"],
-    "Выходной материал": ["опыт", "корпуса", "костная мука", "тесто"],
+    "Тип": ["автосборка", "ферма", "двигатель", "база", "хранилище лавы", "карьер", "техника"],
+    "Тип техники": ["дирижабль"],
+    "Предназначение техники": ["гражданский"],
+    "Выходной материал": ["опыт", "корпуса", "костная мука", "тесто", "двигательный узел", "механизм точности"],
     "Другое": []
 };
 
